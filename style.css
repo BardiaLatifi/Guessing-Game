@@ -1,0 +1,154 @@
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.95rem;
+}
+
+.main {
+  padding: 1em;
+}
+
+button {
+  opacity: 0.8;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 1em 2em;
+  border: none;
+  background-color: #87cefa;
+}
+
+button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* Image */
+
+a {
+  cursor: pointer;
+}
+
+#image-container {
+  border: 3px solid;
+  margin: 1em;
+  padding: 0.5em;
+  background-color: lightgray;
+}
+
+#screenShot {
+  display: block;
+  margin: auto;
+  max-width: 640px;
+}
+
+@media screen and (max-width: 800px) {
+  #screenShot {
+    width: 500px;
+  }
+}
+
+/* Controls */
+
+#controls {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 2em;
+  text-align: center;
+  border: 3px solid;
+  background-color: lightgray;
+}
+
+#btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  margin-bottom: 1.2em;
+  background-color: gray;
+}
+
+#options {
+  display: none;
+  margin: 1em 0;
+}
+
+#submitBtn {
+  display: block;
+  margin: auto;
+  border-radius: 40px;
+  color: white;
+  background-color: #3ae374;
+}
+
+input {
+  margin: 0.5em;
+}
+label {
+  font-size: 0.8rem !important;
+  font-weight: 700;
+}
+
+#dropDownBtn,
+#hintBtn {
+  display: none;
+}
+
+/* message container */
+
+#messageContainer {
+  display: none;
+  text-align: center;
+  width: 100%;
+  padding: 1em;
+  background-color: lightgray;
+}
+
+#message {
+  margin-bottom: 0.5em;
+}
+
+/* Alert */
+
+#alertContainer {
+  position: absolute;
+  display: none;
+  box-sizing: content-box;
+  justify-content: center;
+  align-items: center;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50px);
+  width: 350px;
+  height: 250px;
+  background-color: rgba(211, 211, 211, 0.75);
+  border: 3px solid;
+}
+
+#alertBtnContainer {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#alertBtnContainer button {
+  width: 100px;
+}
+
+#alertText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10px;
+  line-height: 1.8em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+}

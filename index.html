@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tiny5&display=swap"
+      rel="stylesheet"
+    />
+    <title>Guessing Game</title>
+  </head>
+  <body>
+    <div class="main">
+      <div id="image-container">
+        <img id="screenShot" src="./assets/0.jpg" />
+      </div>
+      <div id="controls">
+        <div id="btn-container">
+          <button id="dropDownBtn">Dropdown</button>
+          <button id="hintBtn">Get Hint</button>
+          <button id="nextShotBtn" onclick="nextShot()"></button>
+          <button id="resetBtn" onclick="showResults()">Results / Rest</button>
+        </div>
+        <div id="options">
+          <label>
+            <input type="radio" name="gameOption" value="Option 1" />
+            Option 1
+          </label>
+          <label>
+            <input type="radio" name="gameOption" value="Option 2" />
+            Option 2
+          </label>
+          <label>
+            <input type="radio" name="gameOption" value="Option 3" />
+            Option 3
+          </label>
+          <label>
+            <input type="radio" name="gameOption" value="Option 4" />
+            Option 4
+          </label>
+        </div>
+        <button id="submitBtn" onclick="submit()">Submit</button>
+        <div id="messageContainer">
+          <p id="hint"></p>
+          <p id="message"></p>
+          <p id="score"></p>
+        </div>
+      </div>
+    </div>
+    <div id="alertContainer">
+      <div id="alertText">
+        <p class="results-text" id="resultAlert"></p>
+        <p class="results-text" id="resultShots"></p>
+        <p class="results-text" id="resultCorrect"></p>
+        <p class="results-text" id="resultWrong"></p>
+        <p class="results-text" id="resultPassed"></p>
+        <p class="results-text" id="scoreMessage"></p>
+        <p class="results-text" id="resetMessage"></p>
+      </div>
+      <div id="alertBtnContainer">
+        <button id="alertYesBtn" onclick="reset()">Yes</button>
+        <button id="alertNoBtn" onclick="resume()">NO</button>
+        <button id="alertOkBtn" onclick="reset()">OK</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./games.js"></script>
+  </body>
+</html>
