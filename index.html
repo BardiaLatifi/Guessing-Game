@@ -16,14 +16,35 @@
   <body>
     <div class="main">
       <div id="image-container">
-        <img id="screenShot" src="./assets/0.jpg" />
+        <img id="screenShot" src="./assets/0.0.jpg" />
       </div>
       <div id="controls">
-        <div id="btn-container">
-          <button id="dropDownBtn">Dropdown</button>
+        <div id="btnContainer">
+          <button id="previousBtn" onclick="previous()">Previous</button>
+          <div id="dropDownContainer" class="dropdown">
+            <button
+              id="dropBtn"
+              class="dropbtn"
+              onclick="categorySelection()"
+            ></button>
+            <div id="myDropdown" class="dropdown-content-container">
+              <button id="dropContent1" class="dropdown-content"></button>
+              <button id="dropContent2" class="dropdown-content"></button>
+              <button id="dropContent3" class="dropdown-content"></button>
+              <button id="dropContent4" class="dropdown-content"></button>
+              <button id="dropContent5" class="dropdown-content"></button>
+              <button id="dropContent6" class="dropdown-content"></button>
+              <button id="dropContent7" class="dropdown-content"></button>
+              <button id="dropContent8" class="dropdown-content"></button>
+              <button id="dropContent9" class="dropdown-content"></button>
+              <button id="dropContent10" class="dropdown-content"></button>
+            </div>
+          </div>
+
           <button id="hintBtn">Get Hint</button>
           <button id="nextShotBtn" onclick="nextShot()"></button>
           <button id="resetBtn" onclick="showResults()">Results / Rest</button>
+          <button id="nextBtn" onclick="next()">Next</button>
         </div>
         <div id="options">
           <label>

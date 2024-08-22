@@ -58,13 +58,13 @@ const gamesArray = [
    new Game(9,"grade3", "Max Payne 3", 2012, ["Action-adventure", "Third-person shooter"], ["PC", "PlayStation", "Xbox"], false,
                              " Rockstar Games", "USA", "Max Payne", "./assets/image9.jpg"),
 
-   new Game(10,"grade3", "Metal Gear solid Snake Eater", 2004, ["Action-adventure", "stealth"], ["PlayStation", "Nintendo"], false,
+   new Game(10,"grade3", "Metal Gear solid Snake Eater", 2004, ["Action-adventure", "Stealth"], ["PlayStation", "Nintendo"], false,
                              "	Konami", "Japan", "Big Boss", "./assets/image10.jpg"),
 
    new Game(11,"grade1", "God of War 2018", 2018, ["Action-adventure", "Hack and Slash"], ["PC", "PlayStation"], false,
                              "Santa Monica", "USA", "Kratos", "./assets/image11.jpg"),
 
-   new Game(12,"grade1", "Resident Evil Village", 2021, ["gener1", "gener2"], ["PC", "PlayStation", "Xbox", "Nintendo"], false,
+   new Game(12,"grade1", "Resident Evil Village", 2021, "Survival horror", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
                              "Capcom", "Japan", "Ethan Winters", "./assets/image12.jpg"),
 
    new Game(13,"grade5", "Demon's Souls Remake", 2021, ["Action RPG", "Soulslike"], "PlayStation", true,
@@ -79,7 +79,7 @@ const gamesArray = [
    new Game(16,"grade6", "Blasphemous", 2019, "Metroidvania", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
                              "The Game Kitchen", "Spain", "Penitent One", "./assets/image16.jpg"),
 
-   new Game(17,"grade1", "A Plague Tale: Requiem", 2022, ["Action-adventure", "stealth"], ["PC", "PlayStation", "Xbox", "Nintendo"], false,
+   new Game(17,"grade1", "A Plague Tale: Requiem", 2022, ["Action-adventure", "Stealth"], ["PC", "PlayStation", "Xbox", "Nintendo"], false,
                              "Asobo Studio", "French", "Amicia de Rune", "./assets/image17.jpg"),
 
    new Game(18,"grade1", "Metro Exodus", 2019, "First-person shooter", ["PC", "PlayStation", "Xbox"], false,
@@ -88,6 +88,6 @@ const gamesArray = [
    new Game(19,"grade3", "God of War III", 2010, ["Action-adventure", "Hack and Slash"], "PlayStation", true,
                              "Santa Monica", "USA", "Kratos", "./assets/image19.jpg"),
                              
-   new Game(20,"grade3", "MGS 4: Guns of the Patriots", 2008, ["Action-adventure", "stealth"], "PlayStation", true,
+   new Game(20,"grade3", "MGS 4: Guns of the Patriots", 2008, ["Action-adventure", "Stealth"], "PlayStation", true,
                              "Konami", "Japan", "Solid Snake", "./assets/image20.jpg"),
 ];

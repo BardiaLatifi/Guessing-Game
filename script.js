@@ -1,7 +1,6 @@
-
 /* General */
 
-// declare the score variables 
+// declare the variables 
 
 let score = 5;
 let currectAnswers = 0;
@@ -13,13 +12,208 @@ let passed = 0;
 let currentGame;
 let usedGames = [];
 
-// define the initial view of the game
+// firs tLook of UI
 
-document.getElementById("nextShotBtn").textContent = "Start";
-document.getElementById("resetBtn").style.display = "none";
-document.getElementById("submitBtn").style.display = "none";
+firstLook();
 
 /* Functions */
+
+// define the initial view of the UI
+function firstLook(){
+  document.getElementById("screenShot").src = "./assets/0.0.jpg";
+  document.getElementById("dropBtn").textContent = "";
+  document.getElementById("nextShotBtn").style.display = "none";
+  document.getElementById("resetBtn").style.display = "none";
+  document.getElementById("submitBtn").style.display = "none";
+  document.getElementById("dropDownContainer").style.display = "none";
+  document.getElementById("previousBtn").style.display = "none";
+
+}
+
+
+/* categories */
+
+// next and previous buttons
+
+function next(){
+  let currentCat = document.getElementById("dropBtn").textContent;
+
+  // ensure the dropdown is collapsed by default
+  if( document.getElementById("myDropdown").classList.contains("show")){
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // functional logic of the next button
+  if(currentCat === ""){
+    platformSelection();
+  }
+  else if(currentCat === "Platforms"){
+    genreSelection();
+  }
+  else if(currentCat === "Genres"){
+    gameGenerations();
+  }
+  else if(currentCat === "Generations"){
+    shotLimit();
+  }
+  else if(currentCat === "Num of Shots"){
+    showAllCats();
+  }
+}
+
+function previous(){
+  let currentCat = document.getElementById("dropBtn").textContent;
+
+  // ensure the dropdown is collapsed by default
+  if( document.getElementById("myDropdown").classList.contains("show")){
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+    // functional logic of the previous button
+  if(currentCat === "Platforms"){
+    firstLook();
+  }
+  else if(currentCat === "Genres"){
+    platformSelection();
+  }
+  else if(currentCat === "Generations"){
+    genreSelection();
+  }
+  else if(currentCat === "Num of Shots"){
+    gameGenerations();
+  }
+  else if(currentCat === "done?"){
+    shotLimit();
+  }
+}
+
+// update the dropdown content
+
+function updateDropdown(contents){
+
+  // set all dropdowns to block to ensure all buttons are accessible
+  for (let i = 0; i < 10; i++){
+    document.getElementById(`dropContent${i + 1}`).style.display = "block"; // Ensure all are visible initially
+  }
+
+  // update the content
+  contents.forEach((content, index) =>{
+    document.getElementById(`dropContent${index + 1}`).textContent = content;
+  });
+
+  // hide unused dropdown contents
+  for (let i = contents.length; i < 10; i++){
+    document.getElementById(`dropContent${i + 1}`).style.display = "none";
+  }
+}
+
+function platformSelection(){
+
+  // platform selection UI
+  document.getElementById("screenShot").src = "./assets/0.1.jpg";
+  document.getElementById("dropBtn").textContent = "Platforms";
+  document.getElementById("previousBtn").style.display = "block";
+  document.getElementById("dropDownContainer").style.display = "block";
+
+  document.getElementById("dropBtn").onclick = function() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  updateDropdown(dropdownContents);
+};
+
+let dropdownContents = [
+  "PC",
+  "PlayStation",
+  "Xbox",
+  "Nintendo",
+  "All Platforms"
+];
+}
+
+function genreSelection(){
+
+  // genre selection UI
+  document.getElementById("screenShot").src = "./assets/0.2.jpg";
+  document.getElementById("dropBtn").textContent = "Genres";
+  document.getElementById("dropDownContainer").style.display = "block";
+  document.getElementById("dropBtn").onclick = function() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  updateDropdown(dropdownContents);
+};
+
+let dropdownContents = [
+  "Action-Adventure",
+  "RPG",
+  "Shooter",
+  "Roguelike",
+  "Soulslike",
+  "Metroidvania",
+  "Hack and Slash",
+  "Survival Horror",
+  "Stealth",
+  "All Genres"
+];
+}
+
+// Select the game generations
+
+function gameGenerations(){
+
+  // Generations UI
+  document.getElementById("screenShot").src = "./assets/0.3.jpg";
+  document.getElementById("dropBtn").textContent = "Generations";
+  document.getElementById("dropDownContainer").style.display = "block";
+  document.getElementById("dropBtn").onclick = function() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  updateDropdown(dropdownContents);
+};
+
+let dropdownContents = [
+  "Ancient Times",
+  "SEGA Era (4th)",
+  "PS1 Era (5th)",
+  "PS2 & Xbox Era (6th)",
+  "PS3 & Xbox 360 Era (7th)",
+  "PS4 & Xbox one Era (8th)",
+  "PS5 & Series X/S Era (9th)",
+  "All Generations"
+];
+}
+
+// Set the number of ScreenShots
+
+function shotLimit(){
+
+  // UI
+  document.getElementById("screenShot").src = "./assets/0.4.jpg";
+  document.getElementById("dropBtn").textContent = "Num of Shots";
+  document.getElementById("dropDownContainer").style.display = "block";
+  document.getElementById("dropBtn").style.display = "block";
+  document.getElementById("dropBtn").onclick = function() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  updateDropdown(dropdownContents);
+};
+
+let dropdownContents = [
+  "10 Shots",
+  "20 Shots",
+  "30 Shots",
+  "40 Shots",
+  "50 Shots",
+  "All Possible Shots",
+];
+}
+
+// Show All the Category selected by the user
+
+function showAllCats(){
+
+    // UI
+    document.getElementById("screenShot").src = "./assets/0.5.jpg";
+    document.getElementById("dropBtn").textContent = "done?";
+    document.getElementById("dropBtn").style.display = "none";
+}
+
+// change the style of buttons for better UX
 
 function updateButtonColors() {
   const buttons = document.getElementsByTagName("button");
@@ -27,6 +221,8 @@ function updateButtonColors() {
       button.style.backgroundColor = button.disabled ? "darkgray" : "";
   }
 }
+
+// update the UI
 
 function updateUI(nextShotBtn, submitBtn, resetBtn, resultMessage, scoreChange){
 
@@ -40,6 +236,8 @@ function updateUI(nextShotBtn, submitBtn, resetBtn, resultMessage, scoreChange){
 
   updateButtonColors()
 };
+
+// generate the next screen shot and options
 
 function nextShot(){
 
