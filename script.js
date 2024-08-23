@@ -59,6 +59,12 @@ function next(){
   else if(currentCat === "Num of Shots"){
     showAllCats();
   }
+  else if(currentCat === "done?"){
+    nextShot();
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("previousBtn").style.display = "none";
+    document.getElementById("nextShotBtn").style.display = "block";
+  }
 }
 
 function previous(){
@@ -305,9 +311,17 @@ function nextShot(){
 
   if (usedGames.length === gamesArray.length){
     updateUI(false, false, true, "All games have been used. Restart the game!", 0);
+    img.src = "./assets/0.6.jpg"; 
     return;
   }
-  updateUI(false, true, true, "Let's Begin With 5 Score. which one is the Answer?", 0);
+
+  if(usedGames.length === 1){
+    updateUI(false, true, true, "Let's Begin With 5 Score. which one is the Answer?", 0);
+  } else {
+    updateUI(false, true, true, "Which one is the Answer?", 0);
+  }
+
+
 };
 
 function submit(){
@@ -343,7 +357,11 @@ function submit(){
   }
 
   if(score <= 1){
-    updateUI(true, false, true, ` No! it's ${currentGame.name}.This is your Last chance. try your best or loos the game`, 0);
+    updateUI(true, false, true, `No! it's ${currentGame.name}! This is your Last chance. try your best or loos the game`, 0);
+  }
+
+  if(score <= 1 && userAnswer === ""){
+    updateUI(true, false, true, `It was ${currentGame.name}! This is your Last chance. try your best or loos the game`, 0);
   }
 
   if(score <= 0){

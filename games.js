@@ -91,6 +91,8 @@ const gamesArray = [
    new Game(20,"grade3", "MGS 4: Guns of the Patriots", 2008, ["Action-adventure", "Stealth"], "PlayStation", true,
                              "Konami", "Japan", "Solid Snake", "./assets/image20.jpg"),
 
+  /*
+
    new Game(21,"grade1", "Alan Wake 2", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
                              "studio", "country", "Hero", "./assets/image0.jpg"),
 
@@ -210,4 +212,6 @@ const gamesArray = [
 
    new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
                              "studio", "country", "Hero", "./assets/image0.jpg"),
+
+  */
 ];
