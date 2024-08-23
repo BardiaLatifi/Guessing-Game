@@ -90,4 +90,124 @@ const gamesArray = [
                              
    new Game(20,"grade3", "MGS 4: Guns of the Patriots", 2008, ["Action-adventure", "Stealth"], "PlayStation", true,
                              "Konami", "Japan", "Solid Snake", "./assets/image20.jpg"),
+
+   new Game(21,"grade1", "Alan Wake 2", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(22,"grade1", "Devil May Cry 5", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(23,"grade1", "Elden Ring", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(24,"grade1", "Resident Evil 2 Remake", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(25,"grade1", "Resident Evil 3 Remake", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(26,"grade1", "Spider Man Miles Morales", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(27,"grade1", "Spiderman 2", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(28,"grade1", "The Last of Us Part I", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(29,"grade1", "The Last of Us Part II", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(30,"grade1", "Shadow of Tomb Raider", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(31,"grade1", "Uncharted 2", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(32,"grade1", "Uncharted 3", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(33,"grade1", "Uncharted 4", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(34,"grade1", "Watch Dogs: Legion", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(35,"grade1", "Assassin's Creed Valhalla", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
+
+   new Game(20,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                             "studio", "country", "Hero", "./assets/image0.jpg"),
 ];
