@@ -64,6 +64,7 @@ function next(){
     document.getElementById("nextBtn").style.display = "none";
     document.getElementById("previousBtn").style.display = "none";
     document.getElementById("nextShotBtn").style.display = "block";
+    document.getElementById("dropDownContainer").style.display = "none";
   }
 }
 
@@ -283,7 +284,6 @@ function nextShot(){
   // display the radio buttons
 
   document.getElementById("options").style.display = "flex";
-  document.getElementById("options").style.justifyContent  = "space-evenly";
 
   const radioElements = document.getElementsByName("gameOption");
   const gameOptions = [currentGame.name];
@@ -357,7 +357,7 @@ function submit(){
   }
 
   if(score <= 1){
-    updateUI(true, false, true, `No! it's ${currentGame.name}! This is your Last chance. try your best or loos the game`, 0);
+    updateUI(true, false, true, `No! it's ${currentGame.name}!This is your Last chance. try your best or loos the game`, 0);
   }
 
   if(score <= 1 && userAnswer === ""){

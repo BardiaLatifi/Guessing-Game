@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mq.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,21 +13,34 @@
       rel="stylesheet"
     />
     <title>Guessing Game</title>
+
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: 10% 70% 20%;
+        border-radius: 10px;
+        background-color: #778ca3;
+      }
+    </style>
   </head>
   <body>
     <div class="main">
-      <div id="image-container">
-        <img id="screenShot" src="./assets/0.0.jpg" />
-      </div>
-      <div id="controls">
+      <div id="container">
         <div id="btnContainer">
+          <button id="hintBtn">Get Hint</button>
+          <button id="nextShotBtn" onclick="nextShot()"></button>
+          <button id="resetBtn" onclick="showResults()">
+            Results <br />
+            Reset
+          </button>
+          <button id="nextBtn" onclick="next()">Next</button>
           <button id="previousBtn" onclick="previous()">Previous</button>
+          <button id="submitBtn" onclick="submit()">Submit</button>
+        </div>
+        <img id="screenShot" src="./assets/0.0.jpg" />
+        <div id="rightControl">
           <div id="dropDownContainer" class="dropdown">
-            <button
-              id="dropBtn"
-              class="dropbtn"
-              onclick="categorySelection()"
-            ></button>
+            <button id="dropBtn" onclick="categorySelection()"></button>
             <div id="myDropdown" class="dropdown-content-container">
               <button id="dropContent1" class="dropdown-content"></button>
               <button id="dropContent2" class="dropdown-content"></button>
@@ -40,36 +54,38 @@
               <button id="dropContent10" class="dropdown-content"></button>
             </div>
           </div>
-
-          <button id="hintBtn">Get Hint</button>
-          <button id="nextShotBtn" onclick="nextShot()"></button>
-          <button id="resetBtn" onclick="showResults()">Results / Rest</button>
-          <button id="nextBtn" onclick="next()">Next</button>
+          <div id="options">
+            <label>
+              <input type="radio" name="gameOption" value="Option 1" />
+              Option 1
+            </label>
+            <label>
+              <input type="radio" name="gameOption" value="Option 2" />
+              Option 2
+            </label>
+            <label>
+              <input type="radio" name="gameOption" value="Option 3" />
+              Option 3
+            </label>
+            <label>
+              <input type="radio" name="gameOption" value="Option 4" />
+              Option 4
+            </label>
+            <label>
+              <input type="radio" name="gameOption" value="Option 5" />
+              Option 5
+            </label>
+            <label>
+              <input type="radio" name="gameOption" value="Option 6" />
+              Option 6
+            </label>
+          </div>
         </div>
-        <div id="options">
-          <label>
-            <input type="radio" name="gameOption" value="Option 1" />
-            Option 1
-          </label>
-          <label>
-            <input type="radio" name="gameOption" value="Option 2" />
-            Option 2
-          </label>
-          <label>
-            <input type="radio" name="gameOption" value="Option 3" />
-            Option 3
-          </label>
-          <label>
-            <input type="radio" name="gameOption" value="Option 4" />
-            Option 4
-          </label>
-        </div>
-        <button id="submitBtn" onclick="submit()">Submit</button>
-        <div id="messageContainer">
-          <p id="hint"></p>
-          <p id="message"></p>
-          <p id="score"></p>
-        </div>
+      </div>
+      <div id="messageContainer">
+        <p id="hint"></p>
+        <p id="message"></p>
+        <p id="score"></p>
       </div>
     </div>
     <div id="alertContainer">
