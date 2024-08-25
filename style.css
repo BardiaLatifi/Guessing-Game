@@ -17,6 +17,13 @@ body{
   padding: 1em;
 }
 
+#container {
+  display: grid;
+  grid-template-columns: 10% 70% 20%;
+  border-radius: 10px;
+  background-color: #778ca3;
+}
+
 button {
   color: white;
   font-size: 1rem;
@@ -115,11 +122,16 @@ input:hover, label:hover{
   cursor: pointer;
 }
 
+input:checked + label {
+  color: white;
+  background-color: hsl(148, 71%, 44%);
+}
 
 /* drop down */
 
 #dropDownContainer{
   height: 100%;
+  padding-top: 3em;
 }
 
 #dropBtn{
@@ -130,7 +142,7 @@ input:hover, label:hover{
 }
 
 #dropBtn:hover {
-  background-color: hsl(148, 100%, 50%);
+  background-color: hsl(148, 90%, 44%);
 }
 
 .dropdown-content-container{
@@ -205,4 +217,16 @@ input:hover, label:hover{
   line-height: 1.8em;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.85rem;
+}
+
+/* Orders */
+
+.item-order-btn-cont:nth-child(2){
+  order: 1;
+}
+.item-order-btn-cont:nth-child(3){
+  order: 6;
+}
+.item-order-btn-cont:nth-child(6){
+  order: 2;
 }

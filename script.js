@@ -96,6 +96,7 @@ function previous(){
 
 // update the dropdown content
 
+
 function updateDropdown(contents){
 
   // set all dropdowns to block to ensure all buttons are accessible
@@ -175,13 +176,13 @@ function gameGenerations(){
 };
 
 let dropdownContents = [
-  "Ancient Times",
+  "Ancient Times (1th & 2th & 3th)",
   "SEGA Era (4th)",
   "PS1 Era (5th)",
   "PS2 & Xbox Era (6th)",
   "PS3 & Xbox 360 Era (7th)",
   "PS4 & Xbox one Era (8th)",
-  "PS5 & Series X/S Era (9th)",
+  "PS5 & X/S Era (9th)",
   "All Generations"
 ];
 }
@@ -229,6 +230,27 @@ function updateButtonColors() {
   }
 }
 
+// update radio input colors
+
+const radioElements = document.querySelectorAll('input[type="radio"]');
+
+for (let i = 0; i < radioElements.length; i++) {
+    radioElements[i].addEventListener('change', function() {
+        // Reset styles for all radio buttons
+        radioElements.forEach(rb => {
+            rb.parentElement.style.color = ""; // Reset color
+            rb.parentElement.style.backgroundColor = ""; // Reset background
+        });
+
+        // Apply styles to the checked radio button's label
+        if (this.checked) {
+            this.parentElement.style.color = "white"; // Change text color
+            this.parentElement.style.backgroundColor = "hsl(148, 71%, 44%)"; // Change background color
+        }
+    });
+}
+
+
 // update the UI
 
 function updateUI(nextShotBtn, submitBtn, resetBtn, resultMessage, scoreChange){
@@ -252,6 +274,9 @@ function nextShot(){
   document.getElementById("nextShotBtn").textContent = "Next Shot";
   document.getElementById("resetBtn").style.display = "block";
   document.getElementById("submitBtn").style.display = "block";
+  document.getElementById("messageContainer").style.backgroundColor = "";
+
+
 
   // display the Messages
 
@@ -285,7 +310,6 @@ function nextShot(){
 
   document.getElementById("options").style.display = "flex";
 
-  const radioElements = document.getElementsByName("gameOption");
   const gameOptions = [currentGame.name];
 
   // generate the random options
@@ -307,6 +331,8 @@ function nextShot(){
     radioElements.values[i] = gameOptions[i];
     radioElements[i].nextSibling.textContent = gameOptions[i];
     radioElements[i].checked = false;
+    radioElements[i].parentElement.style.color = ""; // Reset text color
+    radioElements[i].parentElement.style.backgroundColor = ""; // Reset background color
   }
 
   if (usedGames.length === gamesArray.length){
@@ -320,8 +346,6 @@ function nextShot(){
   } else {
     updateUI(false, true, true, "Which one is the Answer?", 0);
   }
-
-
 };
 
 function submit(){
@@ -330,7 +354,7 @@ function submit(){
 
   // find the user answer
 
-  for(i = 0; i < radioElements.length; i++){
+  for( let i = 0; i < radioElements.length; i++){
     if(radioElements[i].checked){
       userAnswer = radioElements.values[i];
       break;
@@ -339,18 +363,23 @@ function submit(){
 
   if(userAnswer === currentGame.name){
     updateUI(true, false, true, "Well don! the Answer is currect!", 3);
+    document.getElementById("messageContainer").style.backgroundColor = "hsl(148, 71%, 65%)";
     currectAnswers++;
   }
 
   if(userAnswer === ""){
-    updateUI(true, false, true, "Ok! you dont know the answer. go for the next shot", -1);
+    updateUI(true, false, true, "Ok! you dont know the answer. Go for the Next Shot", 0);
+    document.getElementById("messageContainer").style.backgroundColor = "hsl(60, 100%, 80%)";
     passed++;
-  }
+    }
 
   if(userAnswer !== currentGame.name && userAnswer !== ""){
     updateUI(true, false, true, `wrong! the Answer was ${currentGame.name}. press Next Shot Button`, -2);
+    document.getElementById("messageContainer").style.backgroundColor = "hsl(0, 64%, 61%)";
     wrongAnswers++;
   }
+
+  // update the user answer color
 
   if(score <= 2){
     updateUI(true, false, true, `the answer was ${currentGame.name}. if you get zero or negative score, the game will be over`, 0);
