@@ -1,5 +1,4 @@
 
-
 class Game{
   constructor(id, grade, name, year, gener, platform, exclusive, studio, country, hero, src){
     this.id = id;

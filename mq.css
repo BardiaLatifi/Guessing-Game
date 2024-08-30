@@ -1,0 +1,254 @@
+
+@media screen and (max-width: 1400px) {
+  #screenShot {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #screenShot {
+    width: 800px;
+  }
+  .dropdown-content{
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #screenShot {
+    width: 750px;
+  }
+  .dropdown-content{
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #screenShot {
+    width: 650px;
+  }
+  .dropdown-content{
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #screenShot {
+    width: 550px;
+  }
+  button {
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.7em 1.2em;
+  }
+  label {
+    font-size: 0.7rem !important;
+  }
+  .dropdown-content{
+    font-size: 0.70rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #screenShot {
+    width: 500px;
+  }
+  button {
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.7em 1.2em;
+  }
+  label {
+    font-size: 0.6rem !important;
+  }
+  .dropdown-content{
+    font-size: 0.6rem;
+  }
+  #message, #score {
+    font-size: 1rem !important;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #screenShot {
+    width: 450px;
+  }
+  button {
+    font-size: 0.6rem;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.7em 1.2em;
+  }
+  input[type='radio'] { 
+    transform: scale(1.5);
+  
+  }
+  label {
+    font-size: 0.5rem !important;
+  }
+  .dropdown-content{
+    font-size: 0.5rem;
+  }
+  #message, #score {
+    font-size: 1rem !important;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main{
+    padding: 0.3em;
+  }
+  #screenShot {
+    width: 400px;
+  }
+  button {
+    font-size: 0.5rem;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.7em 1.2em;
+  }
+  label {
+    font-size: 0.4rem !important;
+  }
+  .dropdown-content{
+    font-size: 0.4rem;
+  }
+  #message, #score {
+    font-size: 1rem !important;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  /* main */
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    border-radius: 10px;
+    background-color: #778ca3;
+  }
+
+  #screenShot {
+    margin-top: 1em;
+    width: 95%;
+  }
+  /* controls */
+  button {
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 20%;
+    height: 3em;
+    margin: auto;
+    padding: 0;
+  }
+  #btnContainer{
+    flex-direction: row;
+    gap: 1em;
+    width: 100%;
+    height: 100%;
+    padding: 0.5em 0;
+  }
+  /* options */
+  #options{
+    padding-left: 0em;
+    gap: 0.3em;
+  }
+  label, input{
+    padding: 5px;
+  }
+  
+  input[type='radio']{ 
+    transform: scale(1.6);
+  }
+  label{
+    align-items: center;
+    font-size: 1rem !important;
+    font-weight: 700;
+  }
+  /* dropdown */
+  #dropDownContainer{
+    padding: 0;
+  }
+  .dropdown-content{
+    font-size: 0.7rem;
+    height: 2em;
+  }
+  /* message */
+  #message, #score {
+    font-size: 1rem !important;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+  /* Alert */
+  #alertContainer{
+    width: 320px;
+    height: 240px;
+  }
+  #alertBtnContainer{
+    bottom: 20px;
+  }
+  
+  #alertBtnContainer button{
+    width: 100px;
+  }
+  
+  #alertText{
+    top: 10px;
+    line-height: 1.8em;
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 400px){
+    button {
+      font-size: 0.7rem;
+      font-weight: 600;
+      border-radius: 10px;
+      padding: 0;
+    }
+    label{
+      font-size: 0.8rem !important;
+    }
+      /* Alert */
+  #alertContainer{
+    width: 300px;
+    height: 250px;
+  }
+}
+
+/**** Orders ****/
+
+@media screen and (max-width: 620px){
+  /* grid orders */
+  .item-order:nth-child(1){
+    order: 2;
+  }
+  .item-order:nth-child(2){
+    order: 1;
+  }
+  .item-order:nth-child(3){
+    order: 3;
+  }
+  /* button orders */
+  .item-order-btn-cont:nth-child(2){
+    order: 6;
+  }
+  .item-order-btn-cont:nth-child(4){
+    order: 5;
+  }
+  .item-order-btn-cont:nth-child(5){
+    order: 4;
+  }
+  .item-order-btn-cont:nth-child(6){
+    order: 2;
+  }
+}
