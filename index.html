@@ -19,37 +19,19 @@
       <div id="container">
         <div class="item-order" id="btnContainer">
           <button class="item-order-btn-cont" id="hintBtn">Get Hint</button>
-          <button
-            class="item-order-btn-cont"
-            id="nextShotBtn"
-            onclick="nextShot()"
-          ></button>
-          <button
-            class="item-order-btn-cont"
-            id="resetBtn"
-            onclick="showResults()"
-          >
+          <button class="item-order-btn-cont" id="nextShotBtn"></button>
+          <button class="item-order-btn-cont" id="resetBtn">
             Results <br />
             Reset
           </button>
-          <button class="item-order-btn-cont" id="nextBtn" onclick="next()">
-            Next
-          </button>
-          <button
-            class="item-order-btn-cont"
-            id="previousBtn"
-            onclick="previous()"
-          >
-            Previous
-          </button>
-          <button class="item-order-btn-cont" id="submitBtn" onclick="submit()">
-            Submit
-          </button>
+          <button class="item-order-btn-cont" id="nextBtn">Next</button>
+          <button class="item-order-btn-cont" id="previousBtn">Previous</button>
+          <button class="item-order-btn-cont" id="submitBtn">Submit</button>
         </div>
         <img class="item-order" id="screenShot" src="./assets/0.0.jpg" />
         <div class="item-order" id="rightControl">
           <div id="dropDownContainer" class="dropdown">
-            <button id="dropBtn" onclick="categorySelection()"></button>
+            <button id="dropBtn"></button>
             <div id="myDropdown" class="dropdown-content-container">
               <button id="dropContent1" class="dropdown-content"></button>
               <button id="dropContent2" class="dropdown-content"></button>
@@ -108,12 +90,12 @@
         <p class="results-text" id="resetMessage"></p>
       </div>
       <div id="alertBtnContainer">
-        <button id="alertYesBtn" onclick="reset()">Yes</button>
-        <button id="alertNoBtn" onclick="resume()">NO</button>
-        <button id="alertOkBtn" onclick="reset()">OK</button>
+        <button id="alertYesBtn">Yes</button>
+        <button id="alertNoBtn">NO</button>
+        <button id="alertOkBtn">OK</button>
       </div>
     </div>
-    <script src="./script.js"></script>
+    <script type="module" src="./main.js"></script>
     <script src="./games.js"></script>
   </body>
 </html>
