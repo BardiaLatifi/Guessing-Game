@@ -28,4 +28,4 @@ document.getElementById("alertNoBtn").addEventListener("click", combine.resultsP
 document.getElementById("alertOkBtn").addEventListener("click", combine.resultsPOpUp.reset);
 
 
-
+console.log(combine.userCatSelected);
