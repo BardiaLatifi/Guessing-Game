@@ -17,16 +17,24 @@ export function next(){
     platformSelection();
   }
   else if(currentCat === "Platforms"){
-    genreSelection();
+    if (globVar.userCatSelected.platforms.length !== 0) {
+      genreSelection();
+    }
   }
   else if(currentCat === "Genres"){
-    gameGenerations();
+    if (globVar.userCatSelected.genres.length !== 0) {
+      gameGenerations();
+    }
   }
   else if(currentCat === "Generations"){
-    shotLimit();
+    if (globVar.userCatSelected.generations.length !== 0) {
+      shotLimit();
+    }
   }
   else if(currentCat === "Num of Shots"){
-    showAllCats();
+    if (globVar.userCatSelected.shotCount !== 0) {
+      showAllCats();
+    }
   }
   else if(currentCat === "done?"){
     nextShot();
@@ -34,6 +42,7 @@ export function next(){
     document.getElementById("previousBtn").style.display = "none";
     document.getElementById("nextShotBtn").style.display = "block";
     document.getElementById("dropDownContainer").style.display = "none";
+    document.getElementById("catDisplayBox").style.display = "none";
   }
   console.log(globVar.userCatSelected);
 }
@@ -91,7 +100,7 @@ function handleSelection(category, index, selectedValue) {
   } else if (category === "Generations") {
       globVar.userCatSelected.generations[index] = selectedValue;
   } else if (category === "Num of Shots") {
-      globVar.userCatSelected.ShotCount = selectedValue;
+      globVar.userCatSelected.shotCount = selectedValue;
   }
 }
 
@@ -211,16 +220,23 @@ document.getElementById("dropBtn").onclick = function() {
 
 function showAllCats() {
 
-  // UI
+    // Clean Up
+
+  cleanUpSelections();
+  console.log(globVar.userCatSelected);
+
+    // UI
 
   document.getElementById("screenShot").src = "./assets/0.5.jpg";
   document.getElementById("dropBtn").textContent = "done?";
   document.getElementById("dropBtn").style.display = "none";
   document.getElementById("dropDownContainer").style.display = "block";
+  document.getElementById("catDisplayBox").style.display = "flex";
+  document.getElementById("selectedPlatforms").textContent = "Platforms";
+  document.getElementById("selectedGenres").textContent = "Game Genre";
+  document.getElementById("selectedGens").textContent = "Generations";
+  document.getElementById("numOfShots").textContent = globVar.userCatSelected.shotCount;
 
-  // Clean Up
 
-  cleanUpSelections();
-  console.log(globVar.userCatSelected);
 }
 
