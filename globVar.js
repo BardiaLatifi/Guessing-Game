@@ -14,6 +14,6 @@ userCatSelected: {
   platforms: [],
   genres: [],
   generations: [],
-  ShotCount: 0,
+  shotCount: 0,
 },
 };
