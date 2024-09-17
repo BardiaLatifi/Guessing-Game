@@ -6,6 +6,10 @@ import { updateUI} from "./UI.js";
 export function nextShot(){
 
   // change the UI
+  document.getElementById("liveCatDisplay").style.display = "none";
+  document.getElementById("previousBtn").style.display = "none";
+  document.getElementById("nextBtn").style.display = "none";
+  document.getElementById("nextShotBtn").style.display = "block";
   document.getElementById("nextShotBtn").textContent = "Next Shot";
   document.getElementById("resetBtn").style.display = "block";
   document.getElementById("submitBtn").style.display = "block";
