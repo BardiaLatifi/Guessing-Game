@@ -1,11 +1,9 @@
 import { globVar } from "./globVar.js";
-import { updateUI} from "./UI.js";
+import { updateUI } from "./UI.js";
 
 // Next Shot Button Functionality
-
-export function nextShot(){
-
-  // change the UI
+export function nextShot() {
+  // Change the UI
   document.getElementById("liveCatDisplay").style.display = "none";
   document.getElementById("previousBtn").style.display = "none";
   document.getElementById("nextBtn").style.display = "none";
@@ -15,56 +13,48 @@ export function nextShot(){
   document.getElementById("submitBtn").style.display = "block";
   document.getElementById("messageContainer").style.backgroundColor = "";
 
-  // display the Messages
-
+  // Display the messages
   document.getElementById("messageContainer").style.display = "block";
   document.getElementById("screenShot").style.display = "block";
 
-  /* getting a random screen shot */
+  /* Getting a random screen shot */
 
-  // random game
-
+  // Use the filteredGames array based on user selection
   let randomIndex;
 
-  do{
-    randomIndex = Math.floor(Math.random() * gamesArray.length);
-  }
-  while(globVar.usedGames.includes(gamesArray[randomIndex]));
+  // Random game selection
+  do {
+    randomIndex = Math.floor(Math.random() * globVar.filteredGames.length);
+  } while (globVar.usedGames.includes(globVar.filteredGames[randomIndex]));
 
-  // pusing current game to used game
-
-  globVar.currentGame = gamesArray[randomIndex];
+  // Push current game to used games
+  globVar.currentGame = globVar.filteredGames[randomIndex];
   globVar.usedGames.push(globVar.currentGame);
 
-  // showing the screen shot
-
+  // Show the screenshot
   const img = document.getElementById("screenShot");
   img.src = globVar.currentGame.src;
 
-  /* set the options */
+  /* Set the options */
 
-  // display the radio buttons
-
+  // Display the radio buttons
   document.getElementById("options").style.display = "flex";
 
   const gameOptions = [globVar.currentGame.name];
 
-  // generate the random options
-
-  while(gameOptions.length < globVar.radioElements.length){
+  // Generate random options
+  while (gameOptions.length < globVar.radioElements.length) {
     const randomGame = gamesArray[Math.floor(Math.random() * gamesArray.length)].name;
-    if(!gameOptions.includes(randomGame)){
+    if (!gameOptions.includes(randomGame)) {
       gameOptions.push(randomGame);
     }
   }
 
-  // Shuffle Game options
-
+  // Shuffle game options
   gameOptions.sort(() => 0.5 - Math.random());
 
-  // display the options text
-
-  for(let i = 0; i < gameOptions.length; i++){
+  // Display the options text
+  for (let i = 0; i < gameOptions.length; i++) {
     globVar.radioElements.values[i] = gameOptions[i];
     globVar.radioElements[i].nextSibling.textContent = gameOptions[i];
     globVar.radioElements[i].checked = false;
@@ -72,15 +62,17 @@ export function nextShot(){
     globVar.radioElements[i].parentElement.style.backgroundColor = ""; // Reset background color
   }
 
-  if (globVar.usedGames.length === gamesArray.length){
-    updateUI(false, false, true, "All games have been used. Restart the game!", 0);
-    img.src = "./assets/0.6.jpg"; 
+  // Check if all games have been used
+  if (globVar.usedGames.length >= globVar.filteredGames.length) {
+    updateUI(false, false, true, "All available games have been used. Restart the game!", 0);
+    img.src = "./assets/0.6.jpg"; // Placeholder image
     return;
   }
 
-  if(globVar.usedGames.length === 1){
-    updateUI(false, true, true, "Let's Begin With 5 Score. which one is the Answer?", 0);
+  // Display the question or prompt
+  if (globVar.usedGames.length === 1) {
+    updateUI(false, true, true, "Let's begin with a score of 5. Which one is the answer?", 0);
   } else {
-    updateUI(false, true, true, "Which one is the Answer?", 0);
+    updateUI(false, true, true, "Which one is the answer?", 0);
   }
-};
+}

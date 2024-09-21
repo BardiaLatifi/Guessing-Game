@@ -3,7 +3,7 @@ import { nextShot } from "./shotGenerate.js";
 import { firstLook } from "./UI.js";
 
 // ========================================================================
-    // Variables
+// Variables
 // ========================================================================
 
 let selectedPlatforms = globVar.userCatSelected.platforms;
@@ -12,239 +12,208 @@ let selectedGenerations = globVar.userCatSelected.generations;
 let selectedShotCount = globVar.userCatSelected.shotCount;
 
 // ========================================================================
-    // UI
+// UI
 // ========================================================================
 
 function selectAllElements() {
-  const dropContentElements = document.getElementsByClassName("dropdown-content"); 
+  const dropContentElements = document.getElementsByClassName("dropdown-content");
   for (let i = 0; i < dropContentElements.length; i++) {
     dropContentElements[i].classList.add('dropdown-content-selected');
   }
 }
 
 function clearAllElements() {
-  const dropContentElements = document.getElementsByClassName("dropdown-content"); 
+  const dropContentElements = document.getElementsByClassName("dropdown-content");
   for (let i = 0; i < dropContentElements.length; i++) {
     dropContentElements[i].classList.remove('dropdown-content-selected');
   }
 }
 
 // ========================================================================
-    // NEXT
+// NEXT
 // ========================================================================
 
-export function next(){
+export function next() {
   let currentCat = document.getElementById("dropBtn").textContent;
 
-  // ensure the dropdown is collapsed by default
-  if( document.getElementById("myDropdown").classList.contains("show")){
+  // Ensure the dropdown is collapsed by default
+  if (document.getElementById("myDropdown").classList.contains("show")) {
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
-  // functional logic of the next button
-  if(currentCat === ""){
+  // Functional logic of the next button
+  if (currentCat === "") {
     platformSelection();
-  }
-  else if(currentCat === "Platforms"){
+  } else if (currentCat === "Platforms") {
     if (selectedPlatforms.length !== 0) {
       genreSelection();
     }
-  }
-  else if(currentCat === "Genres"){
+  } else if (currentCat === "Genres") {
     if (selectedGenres.length !== 0) {
       gameGenerations();
     }
-  }
-  else if(currentCat === "Generations"){
+  } else if (currentCat === "Generations") {
     if (selectedGenerations.length !== 0) {
       shotLimit();
     }
-  }
-  else if(currentCat === "Num of Shots"){
+  } else if (currentCat === "Num of Shots") {
     if (globVar.userCatSelected.shotCount !== 0) {
-      catFinal()
-
+      catFinal();
     }
-  }
-  else if(currentCat === "done?"){
-      nextShot();
+  } else if (currentCat === "done?") {
+    nextShot();
   }
 
   // Reset the style of the selected buttons back to normal
-  clearAllElements()
+  clearAllElements();
 
   console.log(globVar.userCatSelected);
   console.log(currentCat);
 }
 
 // ========================================================================
-    // PREVIOUS
+// PREVIOUS
 // ========================================================================
 
-export function previous(){
+export function previous() {
   let currentCat = document.getElementById("dropBtn").textContent;
 
-  // ensure the dropdown is collapsed by default
-  if(document.getElementById("myDropdown").classList.contains("show")){
+  // Ensure the dropdown is collapsed by default
+  if (document.getElementById("myDropdown").classList.contains("show")) {
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
-    // functional logic of the previous button
-  if(currentCat === "Platforms"){
+  // Functional logic of the previous button
+  if (currentCat === "Platforms") {
     firstLook();
-  }
-  else if(currentCat === "Genres"){
+  } else if (currentCat === "Genres") {
     platformSelection();
-  }
-  else if(currentCat === "Generations"){
+  } else if (currentCat === "Generations") {
     genreSelection();
-  }
-  else if(currentCat === "Num of Shots"){
+  } else if (currentCat === "Num of Shots") {
     gameGenerations();
-  }
-  else if(currentCat === "done?"){
+  } else if (currentCat === "done?") {
     shotLimit();
   }
 
-    // Reset the style of the selected buttons back to normal
-    clearAllElements()
+  // Reset the style of the selected buttons back to normal
+  clearAllElements();
 }
 
 // ========================================================================
-    // Update the dropdown content & Handle selection
+// Update the dropdown content & Handle selection
 // ========================================================================
 
-
-
 function updateDropdown(category, contents) {
-    contents.forEach((content, index) => {
-      const dropContentElement = document.getElementById(`dropContent${index + 1}`);
-      dropContentElement.textContent = content;
-      dropContentElement.onclick = () => handleSelection(category, index, content);
+  contents.forEach((content, index) => {
+    const dropContentElement = document.getElementById(`dropContent${index + 1}`);
+    dropContentElement.textContent = content;
+    dropContentElement.onclick = () => handleSelection(category, index, content);
 
-      dropContentElement.style.display = "block"; // Show the content
-        });
+    dropContentElement.style.display = "block"; // Show the content
+  });
 
-    
-    // Hide unused dropdown contents
-    for (let i = contents.length; i < 10; i++) {
-        document.getElementById(`dropContent${i + 1}`).style.display = "none"; 
-    }
-
+  // Hide unused dropdown contents
+  for (let i = contents.length; i < 10; i++) {
+    document.getElementById(`dropContent${i + 1}`).style.display = "none";
+  }
 }
 
 // Handle the user selection of each drop-down
-
 function handleSelection(category, index, selectedValue) {
-  // show on console
   console.log(`Selected: ${selectedValue} in ${category}`);
 
   // Reassign the userCatSelected array properties
   if (category === "Platforms") {
-    if (selectedValue === "All Platforms") {
-      if (selectedPlatforms.length < 4) {
-        selectedPlatforms = [
-          "PC",
-          "PlayStation",
-          "Xbox",
-          "Nintendo"
-        ];
-        selectAllElements()
-        liveCatDisplay()
-      } else {
-        selectedPlatforms = [];
-        clearAllElements()
-        liveCatDisplay()
-      }
-    } else {
-      // user can toggle the options
-      const selectedIndex = selectedPlatforms.indexOf(selectedValue);
-      if (selectedIndex === -1) {
-        selectedPlatforms.push(selectedValue); // Add if not present
-      } else {
-        selectedPlatforms.splice(selectedIndex, 1); // Remove if present
-      }
-      liveCatDisplay()
-    }
+    handlePlatformsSelection(selectedValue);
   } else if (category === "Genres") {
-    if (selectedValue === "All Genres") {
-      if (selectedGenres.length < 9){
-        selectedGenres = [
-          "Action-Adventure",
-          "RPG",
-          "Shooter",
-          "Roguelike",
-          "Soulslike",
-          "Metroidvania",
-          "Hack and Slash",
-          "Survival Horror",
-          "Stealth"
-        ];
-        selectAllElements()
-        liveCatDisplay()
-      } else {
-        selectedGenres = [];
-        clearAllElements()
-        liveCatDisplay()
-      }
-    } else {
-      // user can toggle the options
-      const selectedIndex = selectedGenres.indexOf(selectedValue);
-      if (selectedIndex === -1) {
-        selectedGenres.push(selectedValue); // Add if not present
-      } else {
-        selectedGenres.splice(selectedIndex, 1); // Remove if present
-      }
-      liveCatDisplay()
-    }
+    handleGenresSelection(selectedValue);
   } else if (category === "Generations") {
-    if (selectedValue === "All Generations") {
-      if (selectedGenerations.length < 7){
-        selectedGenerations = [
-          "Ancient Times",
-          "4th gen",
-          "5th gen",
-          "6th gen",
-          "7th gen",
-          "8th gen",
-          "9th gen",
-        ];
-        selectAllElements()
-        liveCatDisplay()
-      } else {
-        selectedGenerations = [];
-        clearAllElements()
-        liveCatDisplay()
-      }
-    } else {
-      // user can toggle the options
-      const selectedIndex = selectedGenerations.indexOf(selectedValue);
-      if (selectedIndex === -1) {
-        selectedGenerations.push(selectedValue); // Add if not present
-      } else {
-        selectedGenerations.splice(selectedIndex, 1); // Remove if present
-      }
-      liveCatDisplay()
-    }
+    handleGenerationsSelection(selectedValue);
   } else if (category === "Num of Shots") {
-    if (selectedValue === "All Possible Shots") {
-      globVar.userCatSelected.shotCount = gamesArray.length;
-      selectedShotCount = globVar.userCatSelected.shotCount;
-      cleanUpSelections()
-    } else {
-      globVar.userCatSelected.shotCount = selectedValue;
-      selectedShotCount = selectedValue;
-      }
-      liveCatDisplay()
+    handleShotsSelection(selectedValue);
   }
 
-    // Toggle the selected class on the clicked element
-    const dropContentElement = document.getElementById(`dropContent${index + 1}`);
-    dropContentElement.classList.toggle('dropdown-content-selected'); // Toggle the 'selected' class
+  // After selection, filter games based on current selections
+  filterGames();
+
+  // Toggle the selected class on the clicked element
+  const dropContentElement = document.getElementById(`dropContent${index + 1}`);
+  dropContentElement.classList.toggle('dropdown-content-selected'); // Toggle the 'selected' class
+}
+
+// Handle platform selection
+function handlePlatformsSelection(selectedValue) {
+  if (selectedValue === "All Platforms") {
+    selectedPlatforms = selectedPlatforms.length < 4 ? ["PC", "PlayStation", "Xbox", "Nintendo"] : [];
+    selectAllElements();
+  } else {
+    const selectedIndex = selectedPlatforms.indexOf(selectedValue);
+    if (selectedIndex === -1) {
+      selectedPlatforms.push(selectedValue); // Add if not present
+    } else {
+      selectedPlatforms.splice(selectedIndex, 1); // Remove if present
+    }
+  }
+  liveCatDisplay();
+}
+
+// Handle genre selection
+function handleGenresSelection(selectedValue) {
+  if (selectedValue === "All Genres") {
+    selectedGenres = selectedGenres.length < 9 ? ["Action-adventure", "RPG", "Shooter", "Roguelike", "Soulslike", "Metroidvania", "Hack and Slash", "Survival/Horror", "Stealth"] : [];
+    selectAllElements();
+  } else {
+    const selectedIndex = selectedGenres.indexOf(selectedValue);
+    if (selectedIndex === -1) {
+      selectedGenres.push(selectedValue); // Add if not present
+    } else {
+      selectedGenres.splice(selectedIndex, 1); // Remove if present
+    }
+  }
+  liveCatDisplay();
+}
+
+// Handle generation selection
+function handleGenerationsSelection(selectedValue) {
+  if (selectedValue === "All Generations") {
+    selectedGenerations = selectedGenerations.length < 7 ? ["Ancient Times", "4th gen", "5th gen", "6th gen", "7th gen", "8th gen", "9th gen"] : [];
+    selectAllElements();
+  } else {
+    const selectedIndex = selectedGenerations.indexOf(selectedValue);
+    if (selectedIndex === -1) {
+      selectedGenerations.push(selectedValue); // Add if not present
+    } else {
+      selectedGenerations.splice(selectedIndex, 1); // Remove if present
+    }
+  }
+  liveCatDisplay();
+}
+
+// Handle number of shots selection
+function handleShotsSelection(selectedValue) {
+  if (selectedValue === "All Possible Shots") {
+    globVar.userCatSelected.shotCount = gamesArray.length;
+    selectedShotCount = globVar.userCatSelected.shotCount;
+  } else {
+    globVar.userCatSelected.shotCount = selectedValue;
+    selectedShotCount = selectedValue;
+  }
+  liveCatDisplay();
+}
+
+// Function to filter games based on current selections
+function filterGames() {
+  globVar.filteredGames = gamesArray.filter(game => {
+    const platformMatch = selectedPlatforms.length === 0 || selectedPlatforms.some(platform => game.platform.includes(platform));
+    const genreMatch = selectedGenres.length === 0 || selectedGenres.some(genre => game.gener.includes(genre));
+    const generationMatch = selectedGenerations.length === 0 || selectedGenerations.some(generation => game.generation.includes(generation));
+    return platformMatch && genreMatch && generationMatch;
+  });
+  console.log("Filtered Games:", globVar.filteredGames);
 }
 
 // Clean Up the empty values
-
 function cleanUpSelections() {
   selectedPlatforms = selectedPlatforms.filter(platform => platform !== undefined);
   selectedGenres = selectedGenres.filter(genre => genre !== undefined);
@@ -252,14 +221,11 @@ function cleanUpSelections() {
 }
 
 // ========================================================================
-    // Categories
+// Categories
 // ========================================================================
 
 // Select the game platform
-
 function platformSelection() {
-
-  // platform selection UI
   document.getElementById("screenShot").src = "./assets/0.1.jpg";
   document.getElementById("dropBtn").textContent = "Platforms";
   document.getElementById("previousBtn").style.display = "block";
@@ -271,47 +237,41 @@ function platformSelection() {
     "Xbox",
     "Nintendo",
     "All Platforms"
-    ];
+  ];
 
-document.getElementById("dropBtn").onclick = function() {
-  document.getElementById("myDropdown").classList.toggle("show");
-  updateDropdown("Platforms", dropdownContents);
+  document.getElementById("dropBtn").onclick = function() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    updateDropdown("Platforms", dropdownContents);
   }
 }
 
 // Select the game genre
-
 function genreSelection() {
-
-  // genre selection UI
   document.getElementById("screenShot").src = "./assets/0.2.jpg";
   document.getElementById("dropBtn").textContent = "Genres";
   document.getElementById("dropDownContainer").style.display = "block";
 
   let dropdownContents = [
-    "Action-Adventure",
+    "Action-adventure",
     "RPG",
     "Shooter",
     "Roguelike",
     "Soulslike",
     "Metroidvania",
     "Hack and Slash",
-    "Survival Horror",
+    "Survival/Horror",
     "Stealth",
     "All Genres"
-    ];
+  ];
 
-document.getElementById("dropBtn").onclick = function() {
-  document.getElementById("myDropdown").classList.toggle("show");
-  updateDropdown("Genres" ,dropdownContents);
+  document.getElementById("dropBtn").onclick = function() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    updateDropdown("Genres", dropdownContents);
   }
 }
 
 // Select the game generations
-
 function gameGenerations() {
-
-  // Generations UI
   document.getElementById("screenShot").src = "./assets/0.3.jpg";
   document.getElementById("dropBtn").textContent = "Generations";
   document.getElementById("dropDownContainer").style.display = "block";
@@ -325,20 +285,16 @@ function gameGenerations() {
     "8th gen",
     "9th gen",
     "All Generations"
-    ];
+  ];
 
-document.getElementById("dropBtn").onclick = function() {
-  document.getElementById("myDropdown").classList.toggle("show");
-  updateDropdown("Generations", dropdownContents);
+  document.getElementById("dropBtn").onclick = function() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    updateDropdown("Generations", dropdownContents);
   }
 }
 
 // Set the number of ScreenShots
-
 function shotLimit() {
-
-  // UI
-
   document.getElementById("screenShot").src = "./assets/0.4.jpg";
   document.getElementById("dropBtn").textContent = "Num of Shots";
   document.getElementById("dropDownContainer").style.display = "block";
@@ -347,24 +303,15 @@ function shotLimit() {
   document.getElementById("nextBtn").textContent = "Next";
   document.getElementById("nextShotBtn").style.display = "none";
 
-  let dropdownContents = [
-    10,
-    20,
-    30,
-    40,
-    50,
-    "All Possible Shots",
-    ];
+  let dropdownContents = [10, 20, 30, 40, 50, "All Possible Shots"];
 
-document.getElementById("dropBtn").onclick = function() {
-  document.getElementById("myDropdown").classList.toggle("show");
-  updateDropdown("Num of Shots",dropdownContents);
+  document.getElementById("dropBtn").onclick = function() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    updateDropdown("Num of Shots", dropdownContents);
   }
 }
 
 function catFinal() {
-
-  // UI
   document.getElementById("screenShot").src = "./assets/0.5.jpg";
   document.getElementById("dropBtn").textContent = "done?";
   document.getElementById("dropBtn").style.display = "none";
@@ -373,11 +320,10 @@ function catFinal() {
 }
 
 // ========================================================================
-    // DISPLAYING
+// DISPLAYING
 // ========================================================================
 
 // Live Displaying
-
 function liveCatDisplay() {
   document.getElementById("liveCatDisplay").style.display = "block";
   document.getElementById("messageContainer").style.backgroundColor = "";

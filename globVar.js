@@ -7,6 +7,7 @@ passed: 0,
 
 currentGame: "",
 usedGames: [],
+filteredGames: [],
 
 radioElements: document.querySelectorAll('input[type="radio"]'),
 
