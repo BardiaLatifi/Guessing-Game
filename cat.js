@@ -131,7 +131,7 @@ function handleSelection(category, index, selectedValue) {
   } else if (category === "Generations") {
     handleGenerationsSelection(selectedValue);
   } else if (category === "Num of Shots") {
-    handleShotsSelection(selectedValue);
+    handleShotLimit(selectedValue);
   }
 
   // After selection, filter games based on current selections
@@ -161,7 +161,11 @@ function handlePlatformsSelection(selectedValue) {
 // Handle genre selection
 function handleGenresSelection(selectedValue) {
   if (selectedValue === "All Genres") {
-    selectedGenres = selectedGenres.length < 9 ? ["Action-adventure", "RPG", "Shooter", "Roguelike", "Soulslike", "Metroidvania", "Hack and Slash", "Survival/Horror", "Stealth"] : [];
+    selectedGenres = selectedGenres.length < 9 ? ["Action-adventure",
+                                                  "RPG", "Shooter", "Roguelike",
+                                                  "Soulslike", "Metroidvania", 
+                                                  "Hack and Slash", "Survival/Horror",
+                                                  "Stealth"] : [];
     selectAllElements();
   } else {
     const selectedIndex = selectedGenres.indexOf(selectedValue);
@@ -177,7 +181,9 @@ function handleGenresSelection(selectedValue) {
 // Handle generation selection
 function handleGenerationsSelection(selectedValue) {
   if (selectedValue === "All Generations") {
-    selectedGenerations = selectedGenerations.length < 7 ? ["Ancient Times", "4th gen", "5th gen", "6th gen", "7th gen", "8th gen", "9th gen"] : [];
+    selectedGenerations = selectedGenerations.length < 7 ? ["Ancient Times",
+                                                            "4th gen", "5th gen", "6th gen",
+                                                            "7th gen", "8th gen", "9th gen"] : [];
     selectAllElements();
   } else {
     const selectedIndex = selectedGenerations.indexOf(selectedValue);
@@ -191,7 +197,7 @@ function handleGenerationsSelection(selectedValue) {
 }
 
 // Handle number of shots selection
-function handleShotsSelection(selectedValue) {
+function handleShotLimit(selectedValue) {
   if (selectedValue === "All Possible Shots") {
     globVar.userCatSelected.shotCount = gamesArray.length;
     selectedShotCount = globVar.userCatSelected.shotCount;
@@ -210,6 +216,8 @@ function filterGames() {
     const generationMatch = selectedGenerations.length === 0 || selectedGenerations.some(generation => game.generation.includes(generation));
     return platformMatch && genreMatch && generationMatch;
   });
+
+  // Show the Games on the console to check the possible problems
   console.log("Filtered Games:", globVar.filteredGames);
 }
 
@@ -317,6 +325,11 @@ function catFinal() {
   document.getElementById("dropBtn").style.display = "none";
   document.getElementById("dropDownContainer").style.display = "none";
   document.getElementById("nextBtn").textContent = "Start";
+
+  // Shuffle & Limit the filtered games to the number of shots selected by the user
+  globVar.filteredGames.sort(() => 0.5 - Math.random());
+  globVar.filteredGames = globVar.filteredGames.slice(0, globVar.userCatSelected.shotCount);
+  console.log(globVar.filteredGames);
 }
 
 // ========================================================================

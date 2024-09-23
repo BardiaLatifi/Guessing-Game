@@ -65,6 +65,7 @@ export function nextShot() {
   // Check if all games have been used
   if (globVar.usedGames.length >= globVar.filteredGames.length) {
     updateUI(false, false, true, "All available games have been used. Restart the game!", 0);
+    document.getElementById("options").style.display = "none";
     img.src = "./assets/0.6.jpg"; // Placeholder image
     return;
   }
