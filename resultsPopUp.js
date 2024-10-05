@@ -39,3 +39,8 @@ export function resume(){
     updateUI(true, false, true, "You didn't leave! I appreciate it. Please take the next shot.", 0);
   }
 }
+
+export function close(){
+  // Hide the alert container
+  document.getElementById("alertContainer").style.display = "none";
+}

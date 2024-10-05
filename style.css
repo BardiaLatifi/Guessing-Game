@@ -240,6 +240,10 @@ input:checked + label {
   font-size: 0.85rem;
 }
 
+#shotLimitMessage{
+  padding: 0 2em;
+}
+
 .results-text{
 margin-bottom: 0.3em;}
 

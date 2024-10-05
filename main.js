@@ -26,3 +26,5 @@ document.getElementById("resetBtn").addEventListener("click", combine.resultsPOp
 document.getElementById("alertYesBtn").addEventListener("click", combine.resultsPOpUp.reset);
 document.getElementById("alertNoBtn").addEventListener("click", combine.resultsPOpUp.resume);
 document.getElementById("alertOkBtn").addEventListener("click", combine.resultsPOpUp.reset);
+document.getElementById("alertOkBtn").addEventListener("click", combine.resultsPOpUp.reset);
+document.getElementById("alertCloseBtn").addEventListener("click", combine.resultsPOpUp.close);

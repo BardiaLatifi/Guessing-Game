@@ -58,10 +58,20 @@ export function next() {
     }
   } else if (currentCat === "Num of Shots") {
     if (globVar.userCatSelected.shotCount !== 0) {
-      catFinal();
+       // Check if there are enough games to display
+      if (globVar.filteredGames.length < globVar.userCatSelected.shotCount) {
+        document.getElementById("alertContainer").style.display = "flex";
+        document.getElementById("shotLimitMessage").textContent = "Considering the categories you've selected, there are not enough screenshots to display. Please go back and make some changes."
+        document.getElementById("alertYesBtn").style.display = "none";
+        document.getElementById("alertNoBtn").style.display = "none";
+        document.getElementById("alertOkBtn").style.display = "none";
+        document.getElementById("alertCloseBtn").style.display = "block";
+      } else {
+        catFinal();
+      }
     }
   } else if (currentCat === "done?") {
-    nextShot();
+     nextShot();
   }
 
   // Reset the style of the selected buttons back to normal
@@ -137,6 +147,9 @@ function handleSelection(category, index, selectedValue) {
   // After selection, filter games based on current selections
   filterGames();
 
+  // Display the user selection at the moment
+  liveCatDisplay();
+
   // Toggle the selected class on the clicked element
   const dropContentElement = document.getElementById(`dropContent${index + 1}`);
   dropContentElement.classList.toggle('dropdown-content-selected'); // Toggle the 'selected' class
@@ -155,7 +168,6 @@ function handlePlatformsSelection(selectedValue) {
       selectedPlatforms.splice(selectedIndex, 1); // Remove if present
     }
   }
-  liveCatDisplay();
 }
 
 // Handle genre selection
@@ -175,7 +187,6 @@ function handleGenresSelection(selectedValue) {
       selectedGenres.splice(selectedIndex, 1); // Remove if present
     }
   }
-  liveCatDisplay();
 }
 
 // Handle generation selection
@@ -193,7 +204,6 @@ function handleGenerationsSelection(selectedValue) {
       selectedGenerations.splice(selectedIndex, 1); // Remove if present
     }
   }
-  liveCatDisplay();
 }
 
 // Handle number of shots selection
@@ -205,7 +215,6 @@ function handleShotLimit(selectedValue) {
     globVar.userCatSelected.shotCount = selectedValue;
     selectedShotCount = selectedValue;
   }
-  liveCatDisplay();
 }
 
 // Function to filter games based on current selections
@@ -344,4 +353,5 @@ function liveCatDisplay() {
   document.getElementById("liveCatGenres").textContent = `Genres: ${selectedGenres.join(', ')}`;
   document.getElementById("liveCatGenerations").textContent = `Generations: ${selectedGenerations.join(', ')}`;
   document.getElementById("liveCatShotLimit").textContent = `${selectedShotCount} Screen Shots.`;
+  document.getElementById("liveAvailableGames").textContent = `${globVar.filteredGames.length} Games available according to your selection.`;
 }
