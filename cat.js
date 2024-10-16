@@ -352,6 +352,19 @@ function liveCatDisplay() {
   document.getElementById("liveCatPlatforms").textContent = `Platforms: ${selectedPlatforms.join(', ')}`;
   document.getElementById("liveCatGenres").textContent = `Genres: ${selectedGenres.join(', ')}`;
   document.getElementById("liveCatGenerations").textContent = `Generations: ${selectedGenerations.join(', ')}`;
-  document.getElementById("liveCatShotLimit").textContent = `${selectedShotCount} Screen Shots.`;
+
+  //  Flexible shot count live display
+  if(selectedShotCount === 0) {
+    document.getElementById("liveCatShotLimit").display = "none";
+  } else {
+    document.getElementById("liveCatShotLimit").display = "block";
+    document.getElementById("liveCatShotLimit").textContent = `${selectedShotCount} Screen Shots.`;
+  }
+
+  if (globVar.filteredGames.length < globVar.userCatSelected.shotCount) {
+    document.getElementById("liveCatShotLimit").style.color = "red";
+  } else {
+    document.getElementById("liveCatShotLimit").style.color = "black";
+  }
   document.getElementById("liveAvailableGames").textContent = `${globVar.filteredGames.length} Games available according to your selection.`;
 }
