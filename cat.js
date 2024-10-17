@@ -94,7 +94,7 @@ export function previous() {
   }
 
   // Functional logic of the previous button
-  if (currentCat === "Platforms") {
+  if (currentCat === "Platforms") {onclick
     firstLook();
   } else if (currentCat === "Genres") {
     platformSelection();
@@ -111,7 +111,7 @@ export function previous() {
 }
 
 // ========================================================================
-// Update the dropdown content & Handle selection
+// Update the dropdown content
 // ========================================================================
 
 function updateDropdown(category, contents) {
@@ -129,7 +129,10 @@ function updateDropdown(category, contents) {
   }
 }
 
-// Handle the user selection of each drop-down
+// ========================================================================
+// Handle selection
+// ========================================================================
+
 function handleSelection(category, index, selectedValue) {
   console.log(`Selected: ${selectedValue} in ${category}`);
 
@@ -151,8 +154,10 @@ function handleSelection(category, index, selectedValue) {
   liveCatDisplay();
 
   // Toggle the selected class on the clicked element
-  const dropContentElement = document.getElementById(`dropContent${index + 1}`);
-  dropContentElement.classList.toggle('dropdown-content-selected'); // Toggle the 'selected' class
+  if (category !== "Num of Shots") {
+    const dropContentElement = document.getElementById(`dropContent${index + 1}`);
+    dropContentElement.classList.toggle('dropdown-content-selected');
+  }
 }
 
 // Handle platform selection
@@ -364,7 +369,7 @@ function liveCatDisplay() {
   if (globVar.filteredGames.length < globVar.userCatSelected.shotCount) {
     document.getElementById("liveCatShotLimit").style.color = "red";
   } else {
-    document.getElementById("liveCatShotLimit").style.color = "black";
+    document.getElementById("liveCatShotLimit").style.color = "green";
   }
   document.getElementById("liveAvailableGames").textContent = `${globVar.filteredGames.length} Games available according to your selection.`;
 }
