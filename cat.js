@@ -6,26 +6,42 @@ import { firstLook } from "./UI.js";
 // Variables
 // ========================================================================
 
+// globVar.js Variables
 let selectedPlatforms = globVar.userCatSelected.platforms;
 let selectedGenres = globVar.userCatSelected.genres;
 let selectedGenerations = globVar.userCatSelected.generations;
 let selectedShotCount = globVar.userCatSelected.shotCount;
+
+// Local Variables
+const dropContentElements = document.getElementsByClassName("dropdown-content");
 
 // ========================================================================
 // UI
 // ========================================================================
 
 function selectAllElements() {
-  const dropContentElements = document.getElementsByClassName("dropdown-content");
   for (let i = 0; i < dropContentElements.length; i++) {
     dropContentElements[i].classList.add('dropdown-content-selected');
   }
 }
 
 function clearAllElements() {
-  const dropContentElements = document.getElementsByClassName("dropdown-content");
   for (let i = 0; i < dropContentElements.length; i++) {
     dropContentElements[i].classList.remove('dropdown-content-selected');
+  }
+}
+
+function singleElementSelection() {
+  for (let i = 0; i < dropContentElements.length; i++) {
+    dropContentElements[i].addEventListener("click", function() {
+      // First, remove the 'dropdown-content-selected' class from all items
+      for (let j = 0; j < dropContentElements.length; j++) {
+        dropContentElements[j].classList.remove('dropdown-content-selected');
+      }
+
+      // Then, add the 'dropdown-content-selected' class to the currently clicked item
+      dropContentElements[i].classList.add('dropdown-content-selected');
+    });
   }
 }
 
@@ -153,18 +169,38 @@ function handleSelection(category, index, selectedValue) {
   // Display the user selection at the moment
   liveCatDisplay();
 
-  // Toggle the selected class on the clicked element
-  if (category !== "Num of Shots") {
-    const dropContentElement = document.getElementById(`dropContent${index + 1}`);
-    dropContentElement.classList.toggle('dropdown-content-selected');
+  // Determine the dropdown button's style based on selection
+  const dropContentElement = document.getElementById(`dropContent${index + 1}`);
+  
+  
+  // Check if the selected value exists in the current selection
+  let isSelected = false;
+  if (category === "Platforms") {
+    isSelected = selectedPlatforms.includes(selectedValue);
+  } else if (category === "Genres") {
+    isSelected = selectedGenres.includes(selectedValue);
+  } else if (category === "Generations") {
+    isSelected = selectedGenerations.includes(selectedValue);
+  }
+  
+  // Set the style of the button based on selection
+  if (isSelected) {
+    dropContentElement.classList.add('dropdown-content-selected');
+  } else {
+    dropContentElement.classList.remove('dropdown-content-selected');
   }
 }
 
 // Handle platform selection
 function handlePlatformsSelection(selectedValue) {
   if (selectedValue === "All Platforms") {
-    selectedPlatforms = selectedPlatforms.length < 4 ? ["PC", "PlayStation", "Xbox", "Nintendo"] : [];
-    selectAllElements();
+    if (selectedPlatforms.length < 4) {
+      selectedPlatforms = ["PC", "PlayStation", "Xbox", "Nintendo"];
+      selectAllElements();
+  } else {
+      selectedPlatforms = [];
+      clearAllElements();
+  }
   } else {
     const selectedIndex = selectedPlatforms.indexOf(selectedValue);
     if (selectedIndex === -1) {
@@ -178,12 +214,23 @@ function handlePlatformsSelection(selectedValue) {
 // Handle genre selection
 function handleGenresSelection(selectedValue) {
   if (selectedValue === "All Genres") {
-    selectedGenres = selectedGenres.length < 9 ? ["Action-adventure",
-                                                  "RPG", "Shooter", "Roguelike",
-                                                  "Soulslike", "Metroidvania", 
-                                                  "Hack and Slash", "Survival/Horror",
-                                                  "Stealth"] : [];
-    selectAllElements();
+    if (selectedGenres.length < 9) {
+      selectedGenres = [
+          "Action-adventure",
+          "RPG",
+          "Shooter",
+          "Roguelike",
+          "Soulslike",
+          "Metroidvania",
+          "Hack and Slash",
+          "Survival/Horror",
+          "Stealth"
+      ];
+      selectAllElements();
+  } else {
+      selectedGenres = [];
+      clearAllElements();
+  }
   } else {
     const selectedIndex = selectedGenres.indexOf(selectedValue);
     if (selectedIndex === -1) {
@@ -197,10 +244,21 @@ function handleGenresSelection(selectedValue) {
 // Handle generation selection
 function handleGenerationsSelection(selectedValue) {
   if (selectedValue === "All Generations") {
-    selectedGenerations = selectedGenerations.length < 7 ? ["Ancient Times",
-                                                            "4th gen", "5th gen", "6th gen",
-                                                            "7th gen", "8th gen", "9th gen"] : [];
-    selectAllElements();
+    if (selectedGenerations.length < 7) {
+      selectedGenerations = [
+          "Ancient Times",
+          "4th gen",
+          "5th gen",
+          "6th gen",
+          "7th gen",
+          "8th gen",
+          "9th gen"
+      ];
+      selectAllElements();
+  } else {
+      selectedGenerations = [];
+      clearAllElements();
+  }
   } else {
     const selectedIndex = selectedGenerations.indexOf(selectedValue);
     if (selectedIndex === -1) {
@@ -220,6 +278,9 @@ function handleShotLimit(selectedValue) {
     globVar.userCatSelected.shotCount = selectedValue;
     selectedShotCount = selectedValue;
   }
+
+  // Single selection functionality for Shot Limit
+  singleElementSelection();
 }
 
 // Function to filter games based on current selections
@@ -360,9 +421,9 @@ function liveCatDisplay() {
 
   //  Flexible shot count live display
   if(selectedShotCount === 0) {
-    document.getElementById("liveCatShotLimit").display = "none";
+    document.getElementById("liveCatShotLimit").style.display = "none";
   } else {
-    document.getElementById("liveCatShotLimit").display = "block";
+    document.getElementById("liveCatShotLimit").style.display = "block";
     document.getElementById("liveCatShotLimit").textContent = `${selectedShotCount} Screen Shots.`;
   }
 
