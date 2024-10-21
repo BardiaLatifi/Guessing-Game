@@ -91,53 +91,51 @@ const gamesArray = [
    new Game(20,"grade3", "MGS 4: Guns of the Patriots", 2008, ["Action-adventure", "Stealth"], "PlayStation", true,
                              "Konami", "Japan", "Solid Snake", "./assets/image20.jpg","7th gen"),
 
-   new Game(21,"grade1", "Alan Wake 2", 2000, "Survival/Horror", ["PC", "PlayStation", "Xbox"], false,
+   new Game(21,"grade1", "Alan Wake 2", 2000, "gener1", ["PC", "PlayStation", "Xbox"], false,
                              "Remedy Entertainment", "Finland", "Saga Anderson", "./assets/image0.jpg"),
 
-                             
-  /*
-   new Game(22,"grade1", "Devil May Cry 5", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(22,"grade1", "Devil May Cry 5", 2019, ["Action-adventure", "Hack and Slash"], ["PC", "PlayStation", "Xbox"], false,
+                             "Capcom", "Japan", "Nero", "./assets/image22.jpg", "8th gen"),
 
-   new Game(23,"grade1", "Elden Ring", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(23,"grade1", "Elden Ring", 2022, ["RPG", "Soulslike"], ["PC", "PlayStation", "Xbox"], false,
+                             "FromSoftware", "Japan", "The Tarnished", "./assets/image23.jpg","9th gen"),
 
-   new Game(24,"grade1", "Resident Evil 2 Remake", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(24,"grade1", "Resident Evil 2 Remake", 2019, "Survival/Horror", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
+                             "Capcom", "Japan", "Leon Kennedy", "./assets/image24.jpg", "8th gen"),
 
-   new Game(25,"grade1", "Resident Evil 3 Remake", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(25,"grade1", "Resident Evil 3 Remake", 2020, "Survival/Horror", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
+                             "Capcom", "Japan", "Jill Valentine", "./assets/image25.jpg", "8th gen"),
 
-   new Game(26,"grade1", "Spider Man Miles Morales", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(26,"grade1", "Spider Man Miles Morales", 2020, "Action-adventure", ["PC", "PlayStation"], false,
+                             "Insomniac Games", "USA", " Miles Morales", "./assets/image26.jpg", "8th gen"),
 
-   new Game(27,"grade1", "Spiderman 2", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(27,"grade1", "Spiderman 2", 2023, "Action-adventure", "PlayStation", true,
+                             "Insomniac Games", "USA", "Peter Parker", "./assets/image27.jpg", "9th gen"),
 
-   new Game(28,"grade1", "The Last of Us Part I", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(28,"grade1", "The Last of Us Part I", 2022, ["Action-adventure", "Survival/Horror"], ["PC", "PlayStation"], false,
+                             "Naughty Dog", "USA", "Joel Miller", "./assets/image28.jpg", "9th gen"),
 
-   new Game(29,"grade1", "The Last of Us Part II", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(29,"grade1", "The Last of Us Part II", 2024, ["Action-adventure", "Survival/Horror"], "PlayStation", true,
+                             "Naughty Dog", "USA", "Ellie", "./assets/image29.jpg", "8th gen"),
 
-   new Game(30,"grade1", "Shadow of Tomb Raider", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(30,"grade1", "Shadow of Tomb Raider", 2018, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
+                             "Eidos-Montréal", "Canada", "Lara Croft", "./assets/image30.jpg", "8th gen"),
 
-   new Game(31,"grade1", "Uncharted 2", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(31,"grade3", "Uncharted 2", 2009, "Action-adventure", "PlayStation", true,
+                             "Naughty Dog", "USA", "Nathan Drake", "./assets/image31.jpg", "7th gen"),
 
-   new Game(32,"grade1", "Uncharted 3", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(32,"grade3", "Uncharted 3", 2011, "Action-adventure", "PlayStation", true,
+                             "Naughty Dog", "USA", "Nathan Drake", "./assets/image32.jpg", "7th gen"),
 
-   new Game(33,"grade1", "Uncharted 4", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(33,"grade1", "Uncharted 4", 2016, "Action-adventure", "PlayStation", true,
+                             "Naughty Dog", "USA", "Nathan Drake", "./assets/image33.jpg", "8th gen"),
 
-   new Game(34,"grade1", "Watch Dogs: Legion", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
+   new Game(34,"grade1", "Watch Dogs: Legion", 2020, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
+                             "Ubisoft", "French", "Hero", "./assets/image34.jpg", "8th gen"),
 
-   new Game(35,"grade1", "Assassin's Creed Valhalla", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
+   new Game(35,"grade1", "Assassin's Creed Valhalla", 2020, ["Action-adventure", "RPG"], ["PC", "PlayStation", "Xbox"], false,
+                             "Ubisoft", "French", "Eivor Varinsdottir", "./assets/image35.jpg", "8th gen"),
+/*
    new Game(36,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
                              "studio", "country", "Hero", "./assets/image0.jpg"),
 
