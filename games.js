@@ -135,22 +135,22 @@ const gamesArray = [
 
    new Game(35,"grade1", "Assassin's Creed Valhalla", 2020, ["Action-adventure", "RPG"], ["PC", "PlayStation", "Xbox"], false,
                              "Ubisoft", "French", "Eivor Varinsdottir", "./assets/image35.jpg", "8th gen"),
+
+   new Game(36,"grade3", "Dead Space 3", 2013, "Survival/Horror", ["PC", "PlayStation", "Xbox"], false,
+                             "Visceral Games", "USA", "Isaac Clarke", "./assets/image36.jpg", "7th gen"),
+
+   new Game(37,"grade3", "Doom Eternal", 2020, "Shooter", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
+                             "id Software", "USA", "Doomguy", "./assets/image37.jpg", "8th gen"),
+
+   new Game(38,"grade3", "GTA IV", 2008, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
+                             "Rockstar North", "USA", "Niko Bellic", "./assets/image38.jpg", "7th gen"),
+
+   new Game(39,"grade3", "GTA V", 2013, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
+                             "Rockstar North", "USA", "Michael, Trevor, and Franklin", "./assets/image39.jpg", "8th gen"),
+
+   new Game(40,"grade3", "Name", 2016, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
+                             "Hangar 13", "USA", " Lincoln Clay", "./assets/image0.jpg", "8th gen"),
 /*
-   new Game(36,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(37,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(38,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(39,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(40,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
    new Game(41,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
                              "studio", "country", "Hero", "./assets/image0.jpg"),
 
