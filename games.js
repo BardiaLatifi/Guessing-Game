@@ -91,8 +91,8 @@ const gamesArray = [
    new Game(20,"grade3", "MGS 4: Guns of the Patriots", 2008, ["Action-adventure", "Stealth"], "PlayStation", true,
                              "Konami", "Japan", "Solid Snake", "./assets/image20.jpg","7th gen"),
 
-   new Game(21,"grade1", "Alan Wake 2", 2000, "gener1", ["PC", "PlayStation", "Xbox"], false,
-                             "Remedy Entertainment", "Finland", "Saga Anderson", "./assets/image0.jpg"),
+   new Game(21,"grade1", "Alan Wake 2", 2023, "Survival/Horror", ["PC", "PlayStation", "Xbox"], false,
+                             "Remedy Entertainment", "Finland", "Saga Anderson", "./assets/image21.jpg", "9th gen"),
 
    new Game(22,"grade1", "Devil May Cry 5", 2019, ["Action-adventure", "Hack and Slash"], ["PC", "PlayStation", "Xbox"], false,
                              "Capcom", "Japan", "Nero", "./assets/image22.jpg", "8th gen"),
