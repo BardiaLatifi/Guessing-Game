@@ -59,7 +59,7 @@ const gamesArray = [
                              " Rockstar Games", "USA", "Max Payne", "./assets/image9.jpg","7th gen"),
 
    new Game(10,"grade3", "Metal Gear solid Snake Eater", 2004, ["Action-adventure", "Stealth"], ["PlayStation", "Nintendo"], false,
-                             "	Konami", "Japan", "Big Boss", "./assets/image10.jpg","6th gen"),
+                             "Konami", "Japan", "Big Boss", "./assets/image10.jpg","6th gen"),
 
    new Game(11,"grade1", "God of War 2018", 2018, ["Action-adventure", "Hack and Slash"], ["PC", "PlayStation"], false,
                              "Santa Monica", "USA", "Kratos", "./assets/image11.jpg","8th gen"),
@@ -148,39 +148,39 @@ const gamesArray = [
    new Game(39,"grade3", "GTA V", 2013, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
                              "Rockstar North", "USA", "Michael, Trevor, and Franklin", "./assets/image39.jpg", "8th gen"),
 
-   new Game(40,"grade3", "Name", 2016, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
-                             "Hangar 13", "USA", " Lincoln Clay", "./assets/image0.jpg", "8th gen"),
+   new Game(40,"grade3", "Mafia III", 2016, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
+                             "Hangar 13", "USA", " Lincoln Clay", "./assets/image40.jpg", "8th gen"),
+
+   new Game(41,"grade3", "Max Payne 1", 2001, "Shooter", ["PC", "PlayStation", "Xbox"], false,
+                             "Remedy Entertainment", "Finland", "Max Payne", "./assets/image41.jpg", "6th gen"),
+
+   new Game(42,"grade3", "MGS: Peace Walker", 2010, ["Action-adventure", "Stealth"], "PlayStation", true,
+                             "Konami", "Japan", "Big Boss", "./assets/image42.jpg", "7th gen"),
+
+   new Game(43,"grade1", "MGS V: The Phantom Pain", 2015, ["Action-adventure", "Stealth"], ["PC", "PlayStation", "Xbox"], false,
+                             "Konami", "Japan", "Venom Snake", "./assets/image43.jpg", "8th gen"),
+
+   new Game(44,"grade3", "MGS 2: Sons of Liberty", 2001, ["Action-adventure", "Stealth"], ["PC", "PlayStation", "Xbox"], false,
+                             "Konami", "Japan", "Solid Snake", "./assets/image44.jpg", "6th gen"),
+
+   new Game(45,"grade3", "MGS: The Twin Snakes", 2004, ["Action-adventure", "Stealth"], ["PC","GameCube"], true,
+                             "Konami", "Japan", "Solid Snake", "./assets/image45.jpg", "6th gen"),
+
+   new Game(46,"grade3", "Red Dead Redemption", 2010, "Action-adventure", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                             "Rockstar San Diego", "USA", "John Marston", "./assets/image46.jpg", "7th gen"),
+
+   new Game(47,"grade3", "Mass Effect 2", 2010, ["Action-adventure", "Shooter"], ["PC", "PlayStation", "Xbox"], false,
+                             "BioWare", "USA", "Commander Shepard", "./assets/image47.jpg", "7th gen"),
+
+   new Game(48,"grade3", "Gears of War", 2006, "Shooter", "Xbox", true,
+                             "Epic Games", "USA", "Marcus Michael Fenix", "./assets/image48.jpg", "7th gen"),
+
+   new Game(49,"grade3", "Rage", 2011, "Shooter", ["PC", "PlayStation", "Xbox"], false,
+                             "id Software", "USA", "Nicholas Raine", "./assets/image49.jpg", "7th gen"),
+
+   new Game(50,"grade3", "Metro: Last Light", 2013, "Shooter", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                             "4A Games", "Ukraine", "Artyom", "./assets/image50.jpg", "7th gen"),
 /*
-   new Game(41,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(42,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(43,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(44,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(45,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(46,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(47,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(48,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(49,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
-   new Game(50,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                             "studio", "country", "Hero", "./assets/image0.jpg"),
-
    new Game(51,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
                              "studio", "country", "Hero", "./assets/image0.jpg"),
 
