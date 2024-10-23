@@ -2,7 +2,7 @@
 class Game{
   constructor(id, grade, name, year, gener, platform, exclusive, studio, country, hero, src, generation){
     this.id = id;
-    this.grade = Array.isArray(grade) ? grade : [grade];
+    this.grade = grade;
     this.name = name;
     this.year = year;
     this.gener = Array.isArray(gener) ? gener : [gener];
@@ -31,7 +31,7 @@ class Game{
 // grade7: 2D none pixel art games like metroid
 
 const gamesArray = [
-  new Game(1, ["grade2", "grade4"], "Hades", 2020, "Roguelike",["PC", "Xbox", "PlayStation", "Nintendo"], false,
+  new Game(1, "grade4", "Hades", 2020, "Roguelike",["PC", "Xbox", "PlayStation", "Nintendo"], false,
                              "Supergiant Games", "USA", "Zagreus", "./assets/image1.jpg",["8th gen", "9th gen"]),
 
   new Game(2,"grade7", "Metroid Dread", 2021, "Metroidvania","Nintendo",true,

@@ -40,14 +40,25 @@ export function nextShot() {
   // Display the radio buttons
   document.getElementById("options").style.display = "flex";
 
+  // Get the grade of the current game
+  const currentGrade = globVar.currentGame.grade;
+
+  console.log(currentGrade);
+
+  // Filter games array to get only games of the same grade as currentGame
+  const filteredByGrade = gamesArray.filter(game => game.grade === currentGrade);
+
+  // Initialize game options with current game's name
   const gameOptions = [globVar.currentGame.name];
 
-  // Generate random options
+  // Generate random options from the filteredByGrade array
   while (gameOptions.length < globVar.radioElements.length) {
-    const randomGame = gamesArray[Math.floor(Math.random() * gamesArray.length)].name;
-    if (!gameOptions.includes(randomGame)) {
-      gameOptions.push(randomGame);
-    }
+  const randomGame = filteredByGrade[Math.floor(Math.random() * filteredByGrade.length)].name;
+
+  // Ensure the option is not already chosen
+  if (!gameOptions.includes(randomGame)) {
+    gameOptions.push(randomGame);
+  }
   }
 
   // Shuffle game options
