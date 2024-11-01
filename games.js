@@ -197,7 +197,7 @@ const gamesArray = [
                               "Next Level Games", "Canada", "Luigi", "./assets/image55.jpg", "8th gen"),
 
     new Game(56,"grade2", "Bayonetta", 2009, ["Action-adventure", "Hack and Slash"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
-                              "PlatinumGames", "USA", "Bayonetta", "./assets/image56.jpg", "7th gen"),
+                              "PlatinumGames", "USA", "Cereza", "./assets/image56.jpg", "7th gen"),
 
     new Game(57,"grade2", "It Takes Two", 2021, ["Action-adventure", "Platformer"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
                               "Hazelight Studios", "Sweden", "Cody & May", "./assets/image57.jpg", "9th gen"),
@@ -210,126 +210,126 @@ const gamesArray = [
 
     new Game(60,"grade2", "Crash Bandicoot 4: It's About Time", 2020, "Platformer", ["PC", "PlayStation", "Nintendo"], false,
                               "Toys for Bob", "USA", "Crash Bandicoot", "./assets/image60.jpg", "9th gen"),
+
+    new Game(61, "grade2", "Bayonetta 3", 2022, ["Action-adventure", "Hack and Slash"], "Nintendo", true,
+                                "PlatinumGames", "USA", "Cereza", "./assets/image61.jpg", "9th gen"),
+
+    new Game(62, "grade2", "Genshin Impact", 2020, ["gener1", "gener2"], ["PC", "Xbox", "PlayStation"], false,
+                                "HoYoverse", "China", "the Traveler", "./assets/image62.jpg", "8th gen"),
 /*
-    new Game(61, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image61.jpg"),
-
-    new Game(62, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image62.jpg"),
-
     new Game(63, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image63.jpg"),
+                                "studio", "country", "Hero", "./assets/image63.jpg" "9th gen"),
 
     new Game(64, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image64.jpg"),
+                                "studio", "country", "Hero", "./assets/image64.jpg" "9th gen"),
 
     new Game(65, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image65.jpg"),
+                                "studio", "country", "Hero", "./assets/image65.jpg" "9th gen"),
 
     new Game(66, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image66.jpg"),
+                                "studio", "country", "Hero", "./assets/image66.jpg" "9th gen"),
 
     new Game(67, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image67.jpg"),
+                                "studio", "country", "Hero", "./assets/image67.jpg" "9th gen"),
 
     new Game(68, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image68.jpg"),
+                                "studio", "country", "Hero", "./assets/image68.jpg" "9th gen"),
 
     new Game(69, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image69.jpg"),
+                                "studio", "country", "Hero", "./assets/image69.jpg" "9th gen"),
 
     new Game(70, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image70.jpg"),
+                                "studio", "country", "Hero", "./assets/image70.jpg" "9th gen"),
 
     new Game(71, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image71.jpg"),
+                                "studio", "country", "Hero", "./assets/image71.jpg" "9th gen"),
 
     new Game(72, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image72.jpg"),
+                                "studio", "country", "Hero", "./assets/image72.jpg" "9th gen"),
                                 
     new Game(73, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image73.jpg"),
+                                "studio", "country", "Hero", "./assets/image73.jpg" "9th gen"),
                                 
     new Game(74, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image74.jpg"),
+                                "studio", "country", "Hero", "./assets/image74.jpg" "9th gen"),
                                 
     new Game(75, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image75.jpg"),
+                                "studio", "country", "Hero", "./assets/image75.jpg" "9th gen"),
                                 
     new Game(76, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image76.jpg"),
+                                "studio", "country", "Hero", "./assets/image76.jpg" "9th gen"),
                                 
     new Game(77, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image77.jpg"),
+                                "studio", "country", "Hero", "./assets/image77.jpg" "9th gen"),
                                 
     new Game(78, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image78.jpg"),
+                                "studio", "country", "Hero", "./assets/image78.jpg" "9th gen"),
                                 
     new Game(79, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image79.jpg"),
+                                "studio", "country", "Hero", "./assets/image79.jpg" "9th gen"),
                                 
     new Game(80, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image80.jpg"),
+                                "studio", "country", "Hero", "./assets/image80.jpg" "9th gen"),
                                 
     new Game(81, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image81.jpg"),
+                                "studio", "country", "Hero", "./assets/image81.jpg" "9th gen"),
                                 
     new Game(82, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image82.jpg"),
+                                "studio", "country", "Hero", "./assets/image82.jpg" "9th gen"),
                                 
     new Game(83, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image83.jpg"),
+                                "studio", "country", "Hero", "./assets/image83.jpg" "9th gen"),
                                 
     new Game(84, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image84.jpg"),
+                                "studio", "country", "Hero", "./assets/image84.jpg" "9th gen"),
                                 
     new Game(85, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image85.jpg"),
+                                "studio", "country", "Hero", "./assets/image85.jpg" "9th gen"),
                                 
     new Game(86, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image86.jpg"),
+                                "studio", "country", "Hero", "./assets/image86.jpg" "9th gen"),
                                 
     new Game(87, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image87.jpg"),
+                                "studio", "country", "Hero", "./assets/image87.jpg" "9th gen"),
                                 
     new Game(88, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image88.jpg"),
+                                "studio", "country", "Hero", "./assets/image88.jpg" "9th gen"),
                                 
     new Game(89, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image89.jpg"),
+                                "studio", "country", "Hero", "./assets/image89.jpg" "9th gen"),
                                 
     new Game(90, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image90.jpg"),
+                                "studio", "country", "Hero", "./assets/image90.jpg" "9th gen"),
                                 
     new Game(91, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image91.jpg"),
+                                "studio", "country", "Hero", "./assets/image91.jpg" "9th gen"),
                                 
     new Game(92, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image92.jpg"),
+                                "studio", "country", "Hero", "./assets/image92.jpg" "9th gen"),
                                 
     new Game(93, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image93.jpg"),
+                                "studio", "country", "Hero", "./assets/image93.jpg" "9th gen"),
                                 
     new Game(94, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image94.jpg"),
+                                "studio", "country", "Hero", "./assets/image94.jpg" "9th gen"),
                                 
     new Game(95, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image95.jpg"),
+                                "studio", "country", "Hero", "./assets/image95.jpg" "9th gen"),
                                 
     new Game(96, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image96.jpg"),
+                                "studio", "country", "Hero", "./assets/image96.jpg" "9th gen"),
                                 
     new Game(97, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image97.jpg"),
+                                "studio", "country", "Hero", "./assets/image97.jpg" "9th gen"),
                                 
     new Game(98, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image98.jpg"),
+                                "studio", "country", "Hero", "./assets/image98.jpg" "9th gen"),
                                 
     new Game(99, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image99.jpg"),
+                                "studio", "country", "Hero", "./assets/image99.jpg" "9th gen"),
                                 
     new Game(100, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image100.jpg"),
+                                "studio", "country", "Hero", "./assets/image100.jpg" "9th gen"),
 
   */
 ];
