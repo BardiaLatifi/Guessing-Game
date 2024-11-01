@@ -40,7 +40,7 @@ const gamesArray = [
   new Game(3,"grade1", "Red Dead Redemption 2", 2018, ["Action-adventure", "Open-world"],["pc", "Xbox", "PlayStation", "Nintendo"], false,
                                              "Rockstar Games", "USA", "Arthur Morgan", "./assets/image3.jpg",["8th gen", "9th gen"]),
 
-  new Game(4,"grade5", "Bloodborne", 2015, ["RPG", "Soulslike"],"PlayStation", true,
+  new Game(4,"grade5", "Bloodborne", 2015, ["ARPG", "Soulslike"],"PlayStation", true,
                                   "FromSoftware", "Japan", "The Hunter ", "./assets/image4.jpg","8th gen"),
                                   
   new Game(5,"grade2", "Zelda", 2017, ["Action-adventure", "RPG"], "Nintendo", true,
@@ -55,7 +55,7 @@ const gamesArray = [
    new Game(8,"grade1", "Sekiro Shadows Die Twice", 2019, ["Action-adventure", "Soulslike"], ["PC", "PlayStation", "Xbox"], false,
                              "FromSoftware", "Japan", "The Wolf", "./assets/image8.jpg","8th gen"),
 
-   new Game(9,"grade3", "Max Payne 3", 2012, ["Action-adventure", "Shooter"], ["PC", "PlayStation", "Xbox"], false,
+   new Game(9,"grade3", "Max Payne 3", 2012, ["Action-adventure", "First/Third Person Shooter"], ["PC", "PlayStation", "Xbox"], false,
                              " Rockstar Games", "USA", "Max Payne", "./assets/image9.jpg","7th gen"),
 
    new Game(10,"grade3", "Metal Gear solid Snake Eater", 2004, ["Action-adventure", "Stealth"], ["PlayStation", "Nintendo"], false,
@@ -67,10 +67,10 @@ const gamesArray = [
    new Game(12,"grade1", "Resident Evil Village", 2021, "Survival/Horror", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
                              "Capcom", "Japan", "Ethan Winters", "./assets/image12.jpg",["8th gen", "9th gen"]),
 
-   new Game(13,"grade5", "Demon's Souls Remake", 2021, ["RPG", "Soulslike"], "PlayStation", true,
+   new Game(13,"grade5", "Demon's Souls Remake", 2021, ["ARPG", "Soulslike"], "PlayStation", true,
                              "Bluepoint Games", "Japan", "The Slayer of Demons", "./assets/image13.jpg","9th gen"),
 
-   new Game(14,"grade3", "BioShock Infinite", 2013, "Shooter", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
+   new Game(14,"grade3", "BioShock Infinite", 2013, "First/Third Person Shooter", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
                              "	Irrational Games", "USA", "Booker DeWitt", "./assets/image14.jpg","8th gen"),
 
    new Game(15,"grade2" , "Shadow of the Colossus", 2005, ["Action-adventure", "Puzzle"], "PlayStation", true,
@@ -82,7 +82,7 @@ const gamesArray = [
    new Game(17,"grade1", "A Plague Tale: Requiem", 2022, ["Action-adventure", "Stealth"], ["PC", "PlayStation", "Xbox", "Nintendo"], false,
                              "Asobo Studio", "French", "Amicia de Rune", "./assets/image17.jpg","9th gen"),
 
-   new Game(18,"grade1", "Metro Exodus", 2019, "Shooter", ["PC", "PlayStation", "Xbox"], false,
+   new Game(18,"grade1", "Metro Exodus", 2019, "First/Third Person Shooter", ["PC", "PlayStation", "Xbox"], false,
                              "	4A Games", "Ukraine", "Artyom", "./assets/image18.jpg","8th gen"),
 
    new Game(19,"grade3", "God of War III", 2010, ["Action-adventure", "Hack and Slash"], "PlayStation", true,
@@ -97,7 +97,7 @@ const gamesArray = [
    new Game(22,"grade1", "Devil May Cry 5", 2019, ["Action-adventure", "Hack and Slash"], ["PC", "PlayStation", "Xbox"], false,
                              "Capcom", "Japan", "Nero", "./assets/image22.jpg", "8th gen"),
 
-   new Game(23,"grade1", "Elden Ring", 2022, ["RPG", "Soulslike"], ["PC", "PlayStation", "Xbox"], false,
+   new Game(23,"grade1", "Elden Ring", 2022, ["ARPG", "Soulslike"], ["PC", "PlayStation", "Xbox"], false,
                              "FromSoftware", "Japan", "The Tarnished", "./assets/image23.jpg","9th gen"),
 
    new Game(24,"grade1", "Resident Evil 2 Remake", 2019, "Survival/Horror", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
@@ -139,7 +139,7 @@ const gamesArray = [
    new Game(36,"grade3", "Dead Space 3", 2013, "Survival/Horror", ["PC", "PlayStation", "Xbox"], false,
                              "Visceral Games", "USA", "Isaac Clarke", "./assets/image36.jpg", "7th gen"),
 
-   new Game(37,"grade3", "Doom Eternal", 2020, "Shooter", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
+   new Game(37,"grade3", "Doom Eternal", 2020, "First/Third Person Shooter", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
                              "id Software", "USA", "Doomguy", "./assets/image37.jpg", "8th gen"),
 
    new Game(38,"grade3", "GTA IV", 2008, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
@@ -151,7 +151,7 @@ const gamesArray = [
    new Game(40,"grade3", "Mafia III", 2016, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
                              "Hangar 13", "USA", " Lincoln Clay", "./assets/image40.jpg", "8th gen"),
 
-   new Game(41,"grade3", "Max Payne 1", 2001, "Shooter", ["PC", "PlayStation", "Xbox"], false,
+   new Game(41,"grade3", "Max Payne 1", 2001, "First/Third Person Shooter", ["PC", "PlayStation", "Xbox"], false,
                              "Remedy Entertainment", "Finland", "Max Payne", "./assets/image41.jpg", "6th gen"),
 
    new Game(42,"grade3", "MGS: Peace Walker", 2010, ["Action-adventure", "Stealth"], "PlayStation", true,
@@ -169,16 +169,16 @@ const gamesArray = [
    new Game(46,"grade3", "Red Dead Redemption", 2010, "Action-adventure", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
                              "Rockstar San Diego", "USA", "John Marston", "./assets/image46.jpg", "7th gen"),
 
-   new Game(47,"grade3", "Mass Effect 2", 2010, ["Action-adventure", "Shooter"], ["PC", "PlayStation", "Xbox"], false,
+   new Game(47,"grade3", "Mass Effect 2", 2010, ["Action-adventure", "First/Third Person Shooter"], ["PC", "PlayStation", "Xbox"], false,
                              "BioWare", "USA", "Commander Shepard", "./assets/image47.jpg", "7th gen"),
 
-   new Game(48,"grade3", "Gears of War", 2006, "Shooter", "Xbox", true,
+   new Game(48,"grade3", "Gears of War", 2006, "First/Third Person Shooter", "Xbox", true,
                              "Epic Games", "USA", "Marcus Michael Fenix", "./assets/image48.jpg", "7th gen"),
 
-   new Game(49,"grade3", "Rage", 2011, "Shooter", ["PC", "PlayStation", "Xbox"], false,
+   new Game(49,"grade3", "Rage", 2011, "First/Third Person Shooter", ["PC", "PlayStation", "Xbox"], false,
                              "id Software", "USA", "Nicholas Raine", "./assets/image49.jpg", "7th gen"),
 
-   new Game(50,"grade3", "Metro: Last Light", 2013, "Shooter", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+   new Game(50,"grade3", "Metro: Last Light", 2013, "First/Third Person Shooter", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
                              "4A Games", "Ukraine", "Artyom", "./assets/image50.jpg", "7th gen"),
 /*
    new Game(51,"grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,

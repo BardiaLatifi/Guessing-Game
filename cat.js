@@ -214,17 +214,14 @@ function handlePlatformsSelection(selectedValue) {
 // Handle genre selection
 function handleGenresSelection(selectedValue) {
   if (selectedValue === "All Genres") {
-    if (selectedGenres.length < 9) {
+    if (selectedGenres.length < 6) {
       selectedGenres = [
           "Action-adventure",
-          "RPG",
-          "Shooter",
-          "Roguelike",
-          "Soulslike",
-          "Metroidvania",
+          "RPG/ARPG/JRPG/Roguelike/Soulslik",
+          "First/Third Person Shooter",
           "Hack and Slash",
           "Survival/Horror",
-          "Stealth"
+          "Metroidvania/Platformer/Puzzle"
       ];
       selectAllElements();
   } else {
@@ -287,7 +284,13 @@ function handleShotLimit(selectedValue) {
 function filterGames() {
   globVar.filteredGames = gamesArray.filter(game => {
     const platformMatch = selectedPlatforms.length === 0 || selectedPlatforms.some(platform => game.platform.includes(platform));
-    const genreMatch = selectedGenres.length === 0 || selectedGenres.some(genre => game.gener.includes(genre));
+
+    const genreMatch = selectedGenres.length === 0 || selectedGenres.some(selectedGenre => {
+      return game.gener.some(gameGenre => {
+          return gameGenre.includes(selectedGenre) || selectedGenre.includes(gameGenre);
+      });
+  });
+
     const generationMatch = selectedGenerations.length === 0 || selectedGenerations.some(generation => game.generation.includes(generation));
     return platformMatch && genreMatch && generationMatch;
   });
@@ -336,14 +339,11 @@ function genreSelection() {
 
   let dropdownContents = [
     "Action-adventure",
-    "RPG",
-    "Shooter",
-    "Roguelike",
-    "Soulslike",
-    "Metroidvania",
+    "RPG/ARPG/JRPG/Roguelike/Soulslik",
+    "First/Third Person Shooter",
     "Hack and Slash",
     "Survival/Horror",
-    "Stealth",
+    "Metroidvania/Platformer/Puzzle",
     "All Genres"
   ];
 
