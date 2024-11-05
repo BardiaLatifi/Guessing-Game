@@ -264,43 +264,43 @@ const gamesArray = [
                                
     new Game(78, "grade5", "The Witcher 3: Wild Hunt", 2015, "ARPG", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
                                 "	CD Projekt Red", "Poland", "Geralt of Rivia", "./assets/image78.jpg", "8th gen"),
-   /*                            
-    new Game(79, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image79.jpg", "9th gen"),
+                               
+    new Game(79, "grade6", "Adventure Island", 1986, "Platformer", ["PlayStation", "Nintendo"], false,
+                                "Hudson Soft", "Japan", "Master Higgins", "./assets/image79.jpg", "Ancient Times"),
+                               
+    new Game(80, "grade6", "Blasphemous 2", 2023, "Metroidvania", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "The Game Kitchen", "Spain", "Penitent One", "./assets/image80.jpg", "9th gen"),
+                               
+    new Game(81, "grade6", "Castlevania", 1986, "Platformer", ["PC", "Nintendo"], false,
+                                "Konami", "Japan", "Simon Belmont", "./assets/image81.jpg", "Ancient Times"),
+                             
+    new Game(82, "grade6", "Celeste", 2018, "Platformer", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Maddy Makes Games", "Canada", "Madeline", "./assets/image82.jpg", "8th gen"),
                                 
-    new Game(80, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image80.jpg", "9th gen"),
+    new Game(83, "grade6", "Contra", 1987, "Run and gun", "Nintendo", true,
+                                "Konami", "Japan", "Bill Rizer and Lance Bean", "./assets/image83.jpg", "Ancient Times"),
                                 
-    new Game(81, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image81.jpg", "9th gen"),
+    new Game(84, "grade6", "Contra III: The Alien Wars", 1992, "Run and gun", "Nintendo", true,
+                                "Konami", "Japan", "Bill Rizer and Lance Bean", "./assets/image84.jpg", "Ancient Times"),
                                 
-    new Game(82, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image82.jpg" "9th gen"),
+    new Game(85, "grade6", "Dead Cells", 2018, ["Roguelike", "Metroidvania"],  ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Motion Twin", "France", "The Beheaded", "./assets/image85.jpg", "8th gen"),
                                 
-    new Game(83, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image83.jpg", "9th gen"),
+    new Game(86, "grade6", "Double Dragon", 1987, "Beat-'em-up",  ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "	Technōs Japan", "Japan", "William Lee", "./assets/image86.jpg", "Ancient Times"),
                                 
-    new Game(84, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image84.jpg", "9th gen"),
+    new Game(87, "grade6", "Metroid", 1986, ["Action-adventure", "Metroidvania"], "Nintendo", true,
+                                "Nintendo", "Japan", "Samus Aran", "./assets/image87.jpg", "Ancient Times"),
                                 
-    new Game(85, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image85.jpg", "9th gen"),
+    new Game(88, "grade6", "Metroid Fusion", 2002, ["Action-adventure", "Metroidvania"], "Game Boy Advance", true,
+                                "Nintendo", "Japan", "Samus Aran", "./assets/image88.jpg", "6th gen"),
                                 
-    new Game(86, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image86.jpg", "9th gen"),
+    new Game(89, "grade6", "Return of the Obra Dinn", 2018, "Puzzle", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Lucas Pope", "USA", "The HEIC chief inspector", "./assets/image89.jpg", "8th gen"),
                                 
-    new Game(87, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image87.jpg", "9th gen"),
-                                
-    new Game(88, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image88.jpg", "9th gen"),
-                                
-    new Game(89, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image89.jpg", "9th gen"),
-                                
-    new Game(90, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image90.jpg", "9th gen"),
-                                
+    new Game(90, "grade6", "Stardew Valley", 2016, ["Life sim", "RPG"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "ConcernedApe", "USA", "The Player", "./assets/image90.jpg", "8th gen"),
+     /*                           
     new Game(91, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
                                 "studio", "country", "Hero", "./assets/image91.jpg", "9th gen"),
                                 
