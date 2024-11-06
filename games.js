@@ -56,7 +56,7 @@ const gamesArray = [
                               "FromSoftware", "Japan", "The Wolf", "./assets/image8.jpg","8th gen"),
 
     new Game(9,"grade3", "Max Payne 3", 2012, ["Action-adventure", "First/Third Person Shooter"], ["PC", "PlayStation", "Xbox"], false,
-                              " Rockstar Games", "USA", "Max Payne", "./assets/image9.jpg","7th gen"),
+                              "Rockstar Games", "USA", "Max Payne", "./assets/image9.jpg","7th gen"),
 
     new Game(10,"grade3", "Metal Gear solid Snake Eater", 2004, ["Action-adventure", "Stealth"], ["PlayStation", "Nintendo"], false,
                               "Konami", "Japan", "Big Boss", "./assets/image10.jpg","6th gen"),
@@ -73,14 +73,14 @@ const gamesArray = [
     new Game(14,"grade3", "BioShock Infinite", 2013, "First/Third Person Shooter", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
                               "	Irrational Games", "USA", "Booker DeWitt", "./assets/image14.jpg","8th gen"),
 
-    new Game(15,"grade2" , "Shadow of the Colossus", 2005, ["Action-adventure", "Puzzle"], "PlayStation", true,
-                              "Japan Studio (Team Ico)", "Japan", " Wander", "./assets/image15.jpg","6th gen"),
+    new Game(15,"grade2", "Shadow of the Colossus", 2005, ["Action-adventure", "Puzzle"], "PlayStation", true,
+                              "Japan Studio (Team Ico)", "Japan", "Wander", "./assets/image15.jpg","6th gen"),
 
     new Game(16,"grade6", "Blasphemous", 2019, "Metroidvania", ["PC", "PlayStation", "Xbox", "Nintendo"], false,
                               "The Game Kitchen", "Spain", "Penitent One", "./assets/image16.jpg","8th gen"),
 
     new Game(17,"grade1", "A Plague Tale: Requiem", 2022, ["Action-adventure", "Stealth"], ["PC", "PlayStation", "Xbox", "Nintendo"], false,
-                              "Asobo Studio", "French", "Amicia de Rune", "./assets/image17.jpg","9th gen"),
+                              "Asobo Studio", "France", "Amicia de Rune", "./assets/image17.jpg","9th gen"),
 
     new Game(18,"grade1", "Metro Exodus", 2019, "First/Third Person Shooter", ["PC", "PlayStation", "Xbox"], false,
                               "	4A Games", "Ukraine", "Artyom", "./assets/image18.jpg","8th gen"),
@@ -107,7 +107,7 @@ const gamesArray = [
                               "Capcom", "Japan", "Jill Valentine", "./assets/image25.jpg", "8th gen"),
 
     new Game(26,"grade1", "Spider Man Miles Morales", 2020, "Action-adventure", ["PC", "PlayStation"], false,
-                              "Insomniac Games", "USA", " Miles Morales", "./assets/image26.jpg", "8th gen"),
+                              "Insomniac Games", "USA", "Miles Morales", "./assets/image26.jpg", "8th gen"),
 
     new Game(27,"grade1", "Spiderman 2", 2023, "Action-adventure", "PlayStation", true,
                               "Insomniac Games", "USA", "Peter Parker", "./assets/image27.jpg", "9th gen"),
@@ -131,10 +131,10 @@ const gamesArray = [
                               "Naughty Dog", "USA", "Nathan Drake", "./assets/image33.jpg", "8th gen"),
 
     new Game(34,"grade1", "Watch Dogs: Legion", 2020, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
-                              "Ubisoft", "French", "Hero", "./assets/image34.jpg", "8th gen"),
+                              "Ubisoft", "France", "Hero", "./assets/image34.jpg", "8th gen"),
 
     new Game(35,"grade1", "Assassin's Creed Valhalla", 2020, ["Action-adventure", "RPG"], ["PC", "PlayStation", "Xbox"], false,
-                              "Ubisoft", "French", "Eivor Varinsdottir", "./assets/image35.jpg", "8th gen"),
+                              "Ubisoft", "France", "Eivor Varinsdottir", "./assets/image35.jpg", "8th gen"),
 
     new Game(36,"grade3", "Dead Space 3", 2013, "Survival/Horror", ["PC", "PlayStation", "Xbox"], false,
                               "Visceral Games", "USA", "Isaac Clarke", "./assets/image36.jpg", "7th gen"),
@@ -149,7 +149,7 @@ const gamesArray = [
                               "Rockstar North", "USA", "Michael, Trevor, and Franklin", "./assets/image39.jpg", "8th gen"),
 
     new Game(40,"grade3", "Mafia III", 2016, "Action-adventure", ["PC", "PlayStation", "Xbox"], false,
-                              "Hangar 13", "USA", " Lincoln Clay", "./assets/image40.jpg", "8th gen"),
+                              "Hangar 13", "USA", "Lincoln Clay", "./assets/image40.jpg", "8th gen"),
 
     new Game(41,"grade3", "Max Payne 1", 2001, "First/Third Person Shooter", ["PC", "PlayStation", "Xbox"], false,
                               "Remedy Entertainment", "Finland", "Max Payne", "./assets/image41.jpg", "6th gen"),
@@ -263,7 +263,7 @@ const gamesArray = [
                                 "CD Projekt Red", "Poland", "Geralt of Rivia", "./assets/image77.jpg", "7th gen"),
                                
     new Game(78, "grade5", "The Witcher 3: Wild Hunt", 2015, "ARPG", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
-                                "	CD Projekt Red", "Poland", "Geralt of Rivia", "./assets/image78.jpg", "8th gen"),
+                                "CD Projekt Red", "Poland", "Geralt of Rivia", "./assets/image78.jpg", "8th gen"),
                                
     new Game(79, "grade6", "Adventure Island", 1986, "Platformer", ["PlayStation", "Nintendo"], false,
                                 "Hudson Soft", "Japan", "Master Higgins", "./assets/image79.jpg", "Ancient Times"),
@@ -300,36 +300,66 @@ const gamesArray = [
                                 
     new Game(90, "grade6", "Stardew Valley", 2016, ["Life sim", "RPG"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
                                 "ConcernedApe", "USA", "The Player", "./assets/image90.jpg", "8th gen"),
-     /*                           
-    new Game(91, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image91.jpg", "9th gen"),
                                 
-    new Game(92, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image92.jpg", "9th gen"),
+    new Game(91, "grade6", "Sunset Riders", 1991, "Run and gun", ["Sega Genesis","PlayStation", "Nintendo"], false,
+                                "	Konami", "Japan", "Billy Cool & Cormano Wild", "./assets/image91.jpg", "4th gen"),
                                 
-    new Game(93, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image93.jpg", "9th gen"),
+    new Game(92, "grade6", "The Binding of Isaac", 2011, ["Action-adventure", "Roguelike"], "PC", false,
+                                "Edmund McMillen & Florian Himsl", "USA", "Isaac", "./assets/image92.jpg", "7th gen"),
                                 
-    new Game(94, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image94.jpg", "9th gen"),
+    new Game(93, "grade6", "Vampire Survivors", 2022, "Roguelike", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Poncle, Ltd", "United Kingdom", "Antonio Belpaese", "./assets/image93.jpg", "9th gen"),
                                 
-    new Game(95, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image95.jpg", "9th gen"),
+    new Game(94, "grade6", "VVVVVV", 2010, ["Platformer", "Puzzle"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Terry Cavanagh", "United Kingdom", "Captain Viridian", "./assets/image94.jpg", "7th gen"),
                                 
-    new Game(96, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image96.jpg", "9th gen"),
+    new Game(95, "grade6", "World of Horror", 2023, ["RPG", "Survival/Horror"], ["PC", "PlayStation", "Nintendo"], false,
+                                "Paweł Koźmiński", "Poland", "Kirie", "./assets/image95.jpg", "9th gen"),
                                 
-    new Game(97, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image97.jpg", "9th gen"),
+    new Game(96, "grade7", "Fez", 2012, ["Platformer", "Puzzle"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Polytron Corporation", "Canada", "Gomez", "./assets/image96.jpg", "9th gen"),
                                 
-    new Game(98, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image98.jpg", "9th gen"),
+    new Game(97, "grade7", "Hollow Knight", 2017, ["Metroidvania", "Soulslike"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Team Cherry", "Australia", "The Knight", "./assets/image97.jpg", "8th gen"),
                                 
-    new Game(99, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image99.jpg", "9th gen"),
+    new Game(98, "grade7", "Inside", 2016, ["Platformer", "Puzzle"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Playdead", "Denmark", "", "./assets/image98.jpg", "8th gen"),
                                 
-    new Game(100, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
-                                "studio", "country", "Hero", "./assets/image100.jpg", "9th gen"),
+    new Game(99, "grade7", "Luigi's Mansion 3", 2019, "Action-adventure", "Nintendo", true,
+                                "Next Level Games", "Canada", "Luigi", "./assets/image99.jpg", "8th gen"),
+      
+    new Game(100, "grade7", "Rayman Legends", 2013, "Platformer", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Ubisoft Montpellier", "France", "Rayman", "./assets/image100.jpg", "8th gen"),
+    
+    new Game(101, "grade7", "Rayman Origins", 2011, "Platformer", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Ubisoft Montpellier", "France", "Rayman", "./assets/image101.jpg", "7th gen"),
+    
+    new Game(102, "grade7", "Sackboy: A Big Adventure", 2020, "Platformer", "PlayStation", true,
+                                "Sumo Digital", "United Kingdom", "Sackboy", "./assets/image102.jpg", "8th gen"),
+    
+    new Game(103, "grade7", "Sonic Colors", 2010, "Platformer", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Sonic Team", "Japan", "Sonic", "./assets/image103.jpg", "7th gen"),
+    
+    new Game(104, "grade7", "Super Mario Odyssey", 2017, ["Action-adventure", "Platformer"], "Nintendo", true,
+                                "Nintendo EPD", "Japan", "Mario", "./assets/image104.jpg", "8th gen"),
+    
+    new Game(105, "grade7", "Super Meat Boy", 2010, "Platformer", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "Team Meat", "USA", "Meat Boy", "./assets/image105.jpg", "7th gen"),
+    
+    new Game(106, "grade7", "Velocity 2X", 2014, ["Puzzle", "Shoot 'em up"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "FuturLab", "United Kingdom", "Kai Tana", "./assets/image106.jpg", "8th gen"),
+    
+    new Game(107, "grade7", "World of Goo", 2008, "Puzzle", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+                                "2D Boy", "USA", "", "./assets/image107.jpg", "7th gen"),
+    /*
+    new Game(108, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                                "studio", "country", "Hero", "./assets/image108.jpg", "9th gen"),
+
+    new Game(109, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                                "studio", "country", "Hero", "./assets/image109.jpg", "9th gen"),
+
+    new Game(110, "grade0", "Name", 2000, ["gener1", "gener2"], ["platform1", "platform2"], true,
+                                "studio", "country", "Hero", "./assets/image110.jpg", "9th gen"),
 
   */
 ];
