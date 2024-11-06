@@ -191,7 +191,7 @@
   /* Alert */
   #alertContainer{
     width: 320px;
-    height: 240px;
+    height: 310px;
   }
   #alertBtnContainer{
     bottom: 20px;
@@ -221,7 +221,7 @@
       /* Alert */
   #alertContainer{
     width: 300px;
-    height: 250px;
+    height: 290px;
   }
 }
 

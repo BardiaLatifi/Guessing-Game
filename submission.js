@@ -51,9 +51,5 @@ export function submit(){
     updateUI(false, false, true, "", 0);
     showResults();
     document.getElementById("resultAlert").textContent = "GAME OVER!";
-    document.getElementById("resultAlert").style.textAlign = "center";
-    document.getElementById("resultAlert").style.fontSize = "1.2rem";
-    document.getElementById("resultAlert").style.fontWeight = "bolder";
-    document.getElementById("resultAlert").style.margin = "0.5em 0 1em 0";
   }
 };

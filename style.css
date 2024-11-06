@@ -212,7 +212,7 @@ input:checked + label {
   left: 40%;
   transform: translate(-40%, -40px);
   width: 350px;
-  height: 280px;
+  height: 320px;
   background-color: rgba(211, 211, 211, 0.75);
   border: 3px solid;
 }
@@ -220,7 +220,7 @@ input:checked + label {
 #alertBtnContainer{
   position: absolute;
   display: flex;
-  bottom: 20px;
+  bottom: 1em;
   justify-content: space-evenly;
   width: 100%;
 }
@@ -246,6 +246,21 @@ input:checked + label {
 
 .results-text{
 margin-bottom: 0.3em;}
+
+#alertCloseBtn {
+  display: none;
+}
+
+#resultAlert {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin: 0.5em 0 1em 0;
+}
+
+#resetMessage {
+  margin: 1em 0;
+}
 
 /* Orders */
 
