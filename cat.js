@@ -269,7 +269,7 @@ function handleGenerationsSelection(selectedValue) {
 // Handle number of shots selection
 function handleShotLimit(selectedValue) {
   if (selectedValue === "All Possible Shots") {
-    globVar.userCatSelected.shotCount = gamesArray.length;
+    globVar.userCatSelected.shotCount = globVar.filteredGames.length;
     selectedShotCount = globVar.userCatSelected.shotCount;
   } else {
     globVar.userCatSelected.shotCount = selectedValue;
