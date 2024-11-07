@@ -30,10 +30,6 @@ export function showResults(){
     document.getElementById("alertNoBtn").style.display = "none";
     document.getElementById("alertYesBtn").textContent = "Restart";
     document.getElementById("resultAlert").textContent = "YOUR RESULTS!";
-    document.getElementById("resultAlert").style.textAlign = "center";
-    document.getElementById("resultAlert").style.fontSize = "1.2rem";
-    document.getElementById("resultAlert").style.fontWeight = "bolder";
-    document.getElementById("resultAlert").style.margin = "0.5em 0 1em 0";
   }
 }
 
