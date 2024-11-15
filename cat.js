@@ -217,7 +217,7 @@ function handleGenresSelection(selectedValue) {
     if (selectedGenres.length < 7) {
       selectedGenres = [
           "Action-adventure",
-          "RPG/ARPG/JRPG/Roguelike/Soulslik",
+          "RPG/ARPG/Roguelike/Soulslik",
           "First/Third Person Shooter",
           "Hack and Slash/Run and gun/Beat-'em-up",
           "Survival/Horror",
@@ -347,7 +347,7 @@ function genreSelection() {
 
   let dropdownContents = [
     "Action-adventure",
-    "RPG/ARPG/JRPG/Roguelike/Soulslik",
+    "RPG/ARPG/Roguelike/Soulslik",
     "First/Third Person Shooter",
     "Hack and Slash/Run and gun/Beat-'em-up",
     "Survival/Horror",
