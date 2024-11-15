@@ -194,8 +194,8 @@ function handleSelection(category, index, selectedValue) {
 // Handle platform selection
 function handlePlatformsSelection(selectedValue) {
   if (selectedValue === "All Platforms") {
-    if (selectedPlatforms.length < 4) {
-      selectedPlatforms = ["PC", "PlayStation", "Xbox", "Nintendo"];
+    if (selectedPlatforms.length < 5) {
+      selectedPlatforms = ["PC", "PlayStation", "Xbox", "Nintendo", "Sega"];
       selectAllElements();
   } else {
       selectedPlatforms = [];
@@ -214,14 +214,15 @@ function handlePlatformsSelection(selectedValue) {
 // Handle genre selection
 function handleGenresSelection(selectedValue) {
   if (selectedValue === "All Genres") {
-    if (selectedGenres.length < 6) {
+    if (selectedGenres.length < 7) {
       selectedGenres = [
           "Action-adventure",
           "RPG/ARPG/JRPG/Roguelike/Soulslik",
           "First/Third Person Shooter",
-          "Hack and Slash",
+          "Hack and Slash/Run and gun/Beat-'em-up",
           "Survival/Horror",
-          "Metroidvania/Platformer/Puzzle"
+          "Metroidvania/Platformer/Puzzle",
+          "Real-time tactics/Life simulation"
       ];
       selectAllElements();
   } else {
@@ -306,6 +307,12 @@ function cleanUpSelections() {
   selectedGenerations = selectedGenerations.filter(generation => generation !== undefined);
 }
 
+// Exception handling
+
+function handleExceptions() {
+  
+}
+
 // ========================================================================
 // Categories
 // ========================================================================
@@ -322,6 +329,7 @@ function platformSelection() {
     "PlayStation",
     "Xbox",
     "Nintendo",
+    "Sega",
     "All Platforms"
   ];
 
@@ -341,9 +349,10 @@ function genreSelection() {
     "Action-adventure",
     "RPG/ARPG/JRPG/Roguelike/Soulslik",
     "First/Third Person Shooter",
-    "Hack and Slash",
+    "Hack and Slash/Run and gun/Beat-'em-up",
     "Survival/Horror",
     "Metroidvania/Platformer/Puzzle",
+    "Real-time tactics/Life simulation",
     "All Genres"
   ];
 

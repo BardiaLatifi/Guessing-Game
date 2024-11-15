@@ -16,7 +16,7 @@ export function submit(){
   }
 
   if(userAnswer === globVar.currentGame.name){
-    updateUI(true, false, true, "Well don! the Answer is currect!", 3);
+    updateUI(true, false, true, "Well don! the Answer is currect!", 1);
     document.getElementById("messageContainer").style.backgroundColor = "hsl(148, 71%, 65%)";
     globVar.currectAnswers++;
   }
@@ -28,7 +28,7 @@ export function submit(){
     }
 
   if(userAnswer !== globVar.currentGame.name && userAnswer !== ""){
-    updateUI(true, false, true, `Wrong! the Answer was ${globVar.currentGame.name}. press Next Shot Button.`, -2);
+    updateUI(true, false, true, `Wrong! the Answer was ${globVar.currentGame.name}. press Next Shot Button.`, -3);
     document.getElementById("messageContainer").style.backgroundColor = "hsl(0, 64%, 61%)";
     globVar.wrongAnswers++;
   }

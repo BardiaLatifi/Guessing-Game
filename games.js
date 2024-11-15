@@ -220,7 +220,7 @@ const gamesArray = [
     new Game(63, "grade3", "Sonic Adventure", 1998, ["Action-adventure", "Platformer"], ["PC", "Xbox", "PlayStation"], false,
                                 "Sonic Team", "Japan", "Sonic", "./assets/image63.jpg", "5th gen"),
 
-    new Game(64, "grade3", "Sonic Adventure 2", 2001, ["Action-adventure", "Platformer"], "Dreamcast", true,
+    new Game(64, "grade3", "Sonic Adventure 2", 2001, ["Action-adventure", "Platformer"], "Sega", true,
                                 "Sonic Team USA", "USA", "Sonic", "./assets/image64.jpg", "6th gen"),
 
     new Game(65, "grade3", "Sonic Heroes", 2003, ["Action-adventure", "Platformer"], ["PC", "Xbox", "PlayStation"], false,
@@ -241,10 +241,10 @@ const gamesArray = [
     new Game(70, "grade4", "Garshasp: The Monster Slayer", 2011, ["Action-adventure", "Hack and Slash"], "PC", false,
                                 "Dead Mage", "Iran", "Garshasp", "./assets/image70.jpg", "8th gen"),
 
-    new Game(71, "grade4", "The Sims", 2000, ["Life simulation", "social simulation"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+    new Game(71, "grade4", "The Sims", 2000, "Life simulation", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
                                 "Maxis", "USA", "", "./assets/image71.jpg", "5th gen"),
 
-    new Game(72, "grade4", "XCOM 2", 2016, ["Turn-based tactics", "Tactical RPG"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
+    new Game(72, "grade4", "XCOM 2", 2016, "Real-time tactics", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
                                 "Firaxis Games", "USA", "The Commander", "./assets/image72.jpg", "8th gen"),
                        
     new Game(73, "grade5", "Dark Souls", 2011, "ARPG", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
@@ -292,7 +292,7 @@ const gamesArray = [
     new Game(87, "grade6", "Metroid", 1986, ["Action-adventure", "Metroidvania"], "Nintendo", true,
                                 "Nintendo", "Japan", "Samus Aran", "./assets/image87.jpg", "Ancient Times"),
                                 
-    new Game(88, "grade6", "Metroid Fusion", 2002, ["Action-adventure", "Metroidvania"], "Game Boy Advance", true,
+    new Game(88, "grade6", "Metroid Fusion", 2002, ["Action-adventure", "Metroidvania"], "Nintendo", true,
                                 "Nintendo", "Japan", "Samus Aran", "./assets/image88.jpg", "6th gen"),
                                 
     new Game(89, "grade6", "Return of the Obra Dinn", 2018, "Puzzle", ["PC", "Xbox", "PlayStation", "Nintendo"], false,
@@ -301,7 +301,7 @@ const gamesArray = [
     new Game(90, "grade6", "Stardew Valley", 2016, ["Life sim", "RPG"], ["PC", "Xbox", "PlayStation", "Nintendo"], false,
                                 "ConcernedApe", "USA", "The Player", "./assets/image90.jpg", "8th gen"),
                                 
-    new Game(91, "grade6", "Sunset Riders", 1991, "Run and gun", ["Sega Genesis","PlayStation", "Nintendo"], false,
+    new Game(91, "grade6", "Sunset Riders", 1991, "Run and gun", ["Sega","PlayStation", "Nintendo"], false,
                                 "	Konami", "Japan", "Billy Cool & Cormano Wild", "./assets/image91.jpg", "4th gen"),
                                 
     new Game(92, "grade6", "The Binding of Isaac", 2011, ["Action-adventure", "Roguelike"], "PC", false,
