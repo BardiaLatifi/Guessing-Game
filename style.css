@@ -37,10 +37,6 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
-  background-color: hsl(18, 100%, 55%);
-}
-
 button:active {
   background-color: white !important;
   color: black;

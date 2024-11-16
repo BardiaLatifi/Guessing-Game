@@ -424,9 +424,21 @@ function catFinal() {
 function liveCatDisplay() {
   document.getElementById("liveCatDisplay").style.display = "block";
   document.getElementById("messageContainer").style.backgroundColor = "";
-  document.getElementById("liveCatPlatforms").textContent = `Platforms: ${selectedPlatforms.join(', ')}`;
-  document.getElementById("liveCatGenres").textContent = `Genres: ${selectedGenres.join(', ')}`;
-  document.getElementById("liveCatGenerations").textContent = `Generations: ${selectedGenerations.join(', ')}`;
+  if (selectedPlatforms.length === 5) {
+    document.getElementById("liveCatPlatforms").textContent = "Platforms: All Platforms";
+  } else {
+      document.getElementById("liveCatPlatforms").textContent = `Platforms: ${selectedPlatforms.join(', ')}`;
+  }
+  if (selectedGenres.length === 7){
+    document.getElementById("liveCatGenres").textContent = "Genres: All Genres"
+  } else {
+    document.getElementById("liveCatGenres").textContent = `Genres: ${selectedGenres.join(', ')}`;
+  }
+  if (selectedGenerations.length === 7) {
+    document.getElementById("liveCatGenerations").textContent = "Generations: All Generations"
+  } else {
+    document.getElementById("liveCatGenerations").textContent = `Generations: ${selectedGenerations.join(', ')}`;
+  }
 
   //  Flexible shot count live display
   if(selectedShotCount === 0) {
